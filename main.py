@@ -2,7 +2,7 @@
 # coding: utf-8
 # %%
 # Set number of iterations for permutation (1 - 100)
-n_iter = 100
+n_iter = 1
 
 # -----------------------------------------
 # Loading required libraries
@@ -118,8 +118,6 @@ X_train, X_test_4, y_train, y_test_4 = train_test_split(X_train,y_train, test_si
 cv_2_3 = pd.concat([X_test_4,y_test_4], axis=1) 
 cv_2_4 = pd.concat([X_train,y_train], axis=1)
 
-# -----------------------------------------
-#permuted iteration
 for rand in range(n_iter):   
 
     # Set up training folds using classes 0, 1 and 2
@@ -131,20 +129,29 @@ for rand in range(n_iter):
 
     all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
     y_df = all_df['Fault']
-    
 
-    original_labels = y_df.to_numpy()
-    misclassified_labels = randomly_misclassify_labels(original_labels)
-    y_df = pd.Series(misclassified_labels) 
-    
+#--------------------------------------------------
+#--------------------------------------------------
+    ##Uncomment for permutation
+#     original_labels = y_df.to_numpy()
+#     misclassified_labels = randomly_misclassify_labels(original_labels)
+#     y_df = pd.Series(misclassified_labels)    
+#--------------------------------------------------
+#--------------------------------------------------
     x_df = all_df.drop('Fault', axis=1)
-    x_df.reset_index(drop=True, inplace=True)
-    y_df.reset_index(drop=True, inplace=True)
-
-    all_df = pd.concat([x_df, y_df], axis = 1)
-    all_df.rename(columns={0: "Fault"}, inplace=True)
-    split_df = np.array_split(all_df, 5)
-
+    
+#--------------------------------------------------
+#--------------------------------------------------
+    ##Uncomment for permutation
+#     x_df.reset_index(drop=True, inplace=True)
+#     y_df.reset_index(drop=True, inplace=True)
+#     all_df = pd.concat([x_df, y_df], axis = 1)
+#     all_df.rename(columns={0: "Fault"}, inplace=True)
+#--------------------------------------------------
+#--------------------------------------------------
+    
+    split_df = np.array_split(all_df, 5)  
+    
     # Save each part as a separate DataFrame
     cv_0, cv_1, cv_2, cv_3, cv_4 = split_df
 
@@ -183,17 +190,27 @@ for rand in range(n_iter):
     all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
     y_df = all_df['Fault']
     
-    original_labels = y_df.to_numpy()
-    misclassified_labels = randomly_misclassify_labels(original_labels)
-    y_df = pd.Series(misclassified_labels) 
+#--------------------------------------------------
+#--------------------------------------------------
+    ##Uncomment for permutation
+#     original_labels = y_df.to_numpy()
+#     misclassified_labels = randomly_misclassify_labels(original_labels)
+#     y_df = pd.Series(misclassified_labels) 
+#--------------------------------------------------
+#--------------------------------------------------   
 
     x_df = all_df.drop('Fault', axis=1)
 
-    x_df.reset_index(drop=True, inplace=True)
-    y_df.reset_index(drop=True, inplace=True)
+#--------------------------------------------------
+#--------------------------------------------------
+    ##Uncomment for permutation
+#     x_df.reset_index(drop=True, inplace=True)
+#     y_df.reset_index(drop=True, inplace=True)
+#     all_df = pd.concat([x_df, y_df], axis = 1)
+#     all_df.rename(columns={0: "Fault"}, inplace=True)
+#--------------------------------------------------
+#-------------------------------------------------- 
 
-    all_df = pd.concat([x_df, y_df], axis = 1)
-    all_df.rename(columns={0: "Fault"}, inplace=True)
     split_df = np.array_split(all_df, 5)
 
     # Save each part as a separate DataFrame
@@ -227,9 +244,15 @@ for rand in range(n_iter):
     y3 = Xy3['Fault']
     X3 = Xy3.drop('Fault', axis=1)
 
-    original_labels = y3.to_numpy()
-    misclassified_labels = randomly_misclassify_labels(original_labels)
-    y3 = pd.Series(misclassified_labels)
+#--------------------------------------------------
+#--------------------------------------------------
+    ##Uncomment for permutation
+#     original_labels = y3.to_numpy()
+#     misclassified_labels = randomly_misclassify_labels(original_labels)
+#     y3 = pd.Series(misclassified_labels)
+#--------------------------------------------------
+#--------------------------------------------------
+
 
     # Initialise LightGradientBoost Classifier
     lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
@@ -275,140 +298,38 @@ for rand in range(n_iter):
         kX4_traini, kX4_testi = kX4_train.iloc[:, idx_3], kX4_test.iloc[:, idx_3]  
 
         outSeries = pd.Series()
-        outSeries['Problem'] = 'FPs'
-        outSeries['Model'] = 'lgbm'
-        outSeries['FS_Method'] = 'lgbm_fi'
-
         # Initialise LightGradientBoost Classifier at every iteration
         lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
         lgbm.fit(kX0_traini,ky0_train)
         lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
         lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
-        lgbm_fpr0 ,lgbm_tpr0, _ = roc_curve(ky0_test, lgbm_probs)
-        gmeans_lgbm0 = np.sqrt(lgbm_tpr0 * (1-lgbm_fpr0))
-        ix_lgbm0 = np.argmax(gmeans_lgbm0)
-        lgbm_gmean_0 = gmeans_lgbm0[ix_lgbm0]
 
         lgbm.fit(kX1_traini,ky1_train)
         lgbm_probs = lgbm.predict_proba(kX1_testi)[:,1]
         lgbm_auc_1 = roc_auc_score(ky1_test, lgbm_probs)    
-        lgbm_fpr1 ,lgbm_tpr1, _ = roc_curve(ky1_test, lgbm_probs)
-        gmeans_lgbm1 = np.sqrt(lgbm_tpr1 * (1-lgbm_fpr1))
-        ix_lgbm1 = np.argmax(gmeans_lgbm1)
-        lgbm_gmean_1 = gmeans_lgbm1[ix_lgbm1]
 
         lgbm.fit(kX2_traini,ky2_train)
         lgbm_probs = lgbm.predict_proba(kX2_testi)[:,1]
         lgbm_auc_2 = roc_auc_score(ky2_test, lgbm_probs)  
-        lgbm_fpr2 ,lgbm_tpr2, _ = roc_curve(ky2_test, lgbm_probs)
-        gmeans_lgbm2 = np.sqrt(lgbm_tpr2 * (1-lgbm_fpr2))
-        ix_lgbm2 = np.argmax(gmeans_lgbm2)
-        lgbm_gmean_2 = gmeans_lgbm2[ix_lgbm2]
 
         lgbm.fit(kX3_traini,ky3_train)
         lgbm_probs = lgbm.predict_proba(kX3_testi)[:,1]
         lgbm_auc_3 = roc_auc_score(ky3_test, lgbm_probs)
-        lgbm_fpr3 ,lgbm_tpr3, _ = roc_curve(ky3_test, lgbm_probs)
-        gmeans_lgbm3 = np.sqrt(lgbm_tpr3 * (1-lgbm_fpr3))
-        ix_lgbm3 = np.argmax(gmeans_lgbm3)
-        lgbm_gmean_3 = gmeans_lgbm3[ix_lgbm3]
 
         lgbm.fit(kX4_traini,ky4_train)
         lgbm_probs = lgbm.predict_proba(kX4_testi)[:,1]
         lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
-        lgbm_fpr4 ,lgbm_tpr4, _ = roc_curve(ky4_test, lgbm_probs)
-        gmeans_lgbm4 = np.sqrt(lgbm_tpr4 * (1-lgbm_fpr4))
-        ix_lgbm4 = np.argmax(gmeans_lgbm4)
-        lgbm_gmean_4 = gmeans_lgbm4[ix_lgbm4]
+
 
         # Compute mean AUC of 5 folds
         a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]
         outSeries['AUC_ROC'] = round(np.mean(a),3)
 
-        # Compute mean G-mean of 5 folds
-        g = [lgbm_gmean_0, lgbm_gmean_1, lgbm_gmean_2, lgbm_gmean_3, lgbm_gmean_4] 
-        outSeries['G_Mean'] = round(np.mean(g),3)
         return outSeries
     with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
         lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
-lgbm_fi_iter_Problem_FPs_permuted_rand_1.to_csv('permuted_rand_1_auc.csv')
+
 print("Maximum permuted AUC: ", lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max())  
 
 
-# %%
-maxrowindex_FPs = lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].idxmax()
-maxrowindex_FPs
-
-# %%
-import random
-
-def iter_random(i):
-        # Initialise LightGradientBoost Classifier
-    lgbm = LGBMClassifier(random_state = random.randrange(1, 10**10), n_jobs=-1, colsample_bytree=0.75)
-
-    outSeries = pd.Series()
-
-    kX0_traini, kX0_testi = kX0_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX0_test.iloc[:,result_3_lgbm[maxrowindex_FPs]]  
-    kX1_traini, kX1_testi = kX1_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX1_test.iloc[:,result_3_lgbm[maxrowindex_FPs]]  
-    kX2_traini, kX2_testi = kX2_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX2_test.iloc[:,result_3_lgbm[maxrowindex_FPs]]  
-    kX3_traini, kX3_testi = kX3_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX3_test.iloc[:,result_3_lgbm[maxrowindex_FPs]] 
-    kX4_traini, kX4_testi = kX4_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX4_test.iloc[:,result_3_lgbm[maxrowindex_FPs]] 
-
-    lgbm.fit(kX0_traini,ky0_train)
-    lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
-    lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
-
-    lgbm.fit(kX1_traini,ky1_train)
-    lgbm_probs = lgbm.predict_proba(kX1_testi)[:,1]
-    lgbm_auc_1 = roc_auc_score(ky1_test, lgbm_probs)    
-
-    lgbm.fit(kX2_traini,ky2_train)
-    lgbm_probs = lgbm.predict_proba(kX2_testi)[:,1]
-    lgbm_auc_2 = roc_auc_score(ky2_test, lgbm_probs)  
-
-    lgbm.fit(kX3_traini,ky3_train)
-    lgbm_probs = lgbm.predict_proba(kX3_testi)[:,1]
-    lgbm_auc_3 = roc_auc_score(ky3_test, lgbm_probs)
-
-    lgbm.fit(kX4_traini,ky4_train)
-    lgbm_probs = lgbm.predict_proba(kX4_testi)[:,1]
-    lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
-
-    a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]    
-    outSeries['AUC_ROC'] = round(np.mean(a),3)
-    return outSeries
-    
-with tqdm_joblib(tqdm(desc="Percentage Completion", total=100)) as progress_bar:
-    lgbm_fi_iter_Problem_FPs_permuted_rand_2 = pd.DataFrame(Parallel(n_jobs=-1)(delayed(iter_random)(i) for i in range(100)))
-lgbm_fi_iter_Problem_FPs_permuted_rand_2.to_csv('permuted_rand_2_auc.csv')
-
-# %%
-import matplotlib.pyplot as plt
-
-plt.rcParams['font.family'] = 'Times New Roman'
-plt.rcParams['font.size'] = 14
-
-boxprops = dict(facecolor='white', color='blue', linewidth=1)
-medianprops = dict(color='red')
-whiskerprops = dict(linestyle='--', dashes=(10, 5))
-flierprops = dict(marker='+', markerfacecolor='red', markersize=8, linestyle='none',
-                 markeredgewidth=1, markeredgecolor='red')
-
-plt.boxplot(lgbm_fi_iter_Problem_FPs_permuted_rand_2, vert=True, widths=0.7, patch_artist=True, 
-            boxprops=boxprops, medianprops=medianprops, whiskerprops=whiskerprops,
-            flierprops=flierprops)
-
-# Set additional parameters
-# plt.ylim(0.92, 0.98)  # Set y-axis limits
-plt.axhline(y=lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max(),
-            color='black', linestyle='-.')  # Horizontal line at mean position
-
-plt.xticks([])
-plt.xlabel('Permuted Labels')
-plt.ylabel('AUC')
-plt.grid(axis='both')
-plt.tight_layout()
-plt.savefig(f'permuted.jpg', dpi=500, bbox_inches='tight')
-# plt.show()
-plt.close()
 # %%

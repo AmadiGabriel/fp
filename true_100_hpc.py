@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
-# %%
+
+# In[4]:
+
+
 # Loading required libraries
 from dependency_1 import tqdm_joblib
 from tqdm import tqdm
@@ -12,6 +15,7 @@ from sklearn.metrics import roc_auc_score, roc_curve
 from lightgbm import LGBMClassifier
 import warnings
 warnings.filterwarnings('ignore')
+import random
 random_seed = 1
 
 # -----------------------------------------
@@ -206,187 +210,89 @@ X3 = Xy3.drop('Fault', axis=1)
 
 # -----------------------------------------
 # Initialise LightGradientBoost Classifier
-lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
 
-# Undertake Feature Importance
-lgbm.fit(X3,y3)
-importance_1 = lgbm.feature_importances_
+for ijk in range(1,101):
+    random_seed = random.randrange(1, 10**10)
 
-# Get the scores with the highest importance and make into a list
-df_fi_1 = {
-    'Feature': range(len(importance_1)),
-    'Score': importance_1
-}
-df_fi_1 = pd.DataFrame(df_fi_1)
-idx_1 = df_fi_1.sort_values('Score', ascending=False) #Feature Importance
-aa_1 = idx_1['Feature'].to_list()
+    lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1, colsample_bytree=0.99)
 
-Feature_Lenght_1= len(aa_1) +1
-result_1 = []
-cols_1 = []
+    # Undertake Feature Importance
+    lgbm.fit(X3,y3)
+    importance_1 = lgbm.feature_importances_
 
-# -----------------------------------------
-# Build feature array
-for i in range(Feature_Lenght_1):
-    cols_1 = aa_1[0:i]
-    result_1.append(cols_1)
-result_3_lgbm = result_1[1:]
+    # Get the scores with the highest importance and make into a list
+    df_fi_1 = {
+        'Feature': range(len(importance_1)),
+        'Score': importance_1
+    }
+    df_fi_1 = pd.DataFrame(df_fi_1)
+    idx_1 = df_fi_1.sort_values('Score', ascending=False) #Feature Importance
+    aa_1 = idx_1['Feature'].to_list()
 
-# Select 
-if len(result_3_lgbm) < 100:
-    num_features = len(result_3_lgbm)
+    Feature_Lenght_1= len(aa_1) +1
+    result_1 = []
+    cols_1 = []
 
-else:
-    num_features = 100
+    # -----------------------------------------
+    # Build feature array
+    for i in range(Feature_Lenght_1):
+        cols_1 = aa_1[0:i]
+        result_1.append(cols_1)
+    result_3_lgbm = result_1[1:]
 
-# -----------------------------------------
-# Feature selection based on feature array
-def Problem_FPs_lgbm(i):
-    idx_fps = result_3_lgbm[i] 
-    kX0_traini, kX0_testi = kX0_train.iloc[:, idx_fps], kX0_test.iloc[:, idx_fps] 
-    kX1_traini, kX1_testi = kX1_train.iloc[:, idx_fps], kX1_test.iloc[:, idx_fps] 
-    kX2_traini, kX2_testi = kX2_train.iloc[:, idx_fps], kX2_test.iloc[:, idx_fps]  
-    kX3_traini, kX3_testi = kX3_train.iloc[:, idx_fps], kX3_test.iloc[:, idx_fps]  
-    kX4_traini, kX4_testi = kX4_train.iloc[:, idx_fps], kX4_test.iloc[:, idx_fps]  
+    # Select 
+    if len(result_3_lgbm) < 100:
+        num_features = len(result_3_lgbm)
 
-    outSeries = pd.Series()
-    outSeries['Problem'] = 'FPs'
-    outSeries['Model'] = 'lgbm'
-    outSeries['FS_Type'] = 'lgbm_fi'
+    else:
+        num_features = 100
 
-    
-    lgbm.fit(kX0_traini,ky0_train)
-    lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
-    lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
-    lgbm_fpr0 ,lgbm_tpr0, _ = roc_curve(ky0_test, lgbm_probs)
-    gmeans_lgbm0 = np.sqrt(lgbm_tpr0 * (1-lgbm_fpr0))
-    ix_lgbm0 = np.argmax(gmeans_lgbm0)
-    lgbm_gmean_0 = gmeans_lgbm0[ix_lgbm0]
+    # -----------------------------------------
+    # Feature selection based on feature array
+    def Problem_FPs_lgbm(i):
+        idx_fps = result_3_lgbm[i] 
+        kX0_traini, kX0_testi = kX0_train.iloc[:, idx_fps], kX0_test.iloc[:, idx_fps] 
+        kX1_traini, kX1_testi = kX1_train.iloc[:, idx_fps], kX1_test.iloc[:, idx_fps] 
+        kX2_traini, kX2_testi = kX2_train.iloc[:, idx_fps], kX2_test.iloc[:, idx_fps]  
+        kX3_traini, kX3_testi = kX3_train.iloc[:, idx_fps], kX3_test.iloc[:, idx_fps]  
+        kX4_traini, kX4_testi = kX4_train.iloc[:, idx_fps], kX4_test.iloc[:, idx_fps]  
 
-    lgbm.fit(kX1_traini,ky1_train)
-    lgbm_probs = lgbm.predict_proba(kX1_testi)[:,1]
-    lgbm_auc_1 = roc_auc_score(ky1_test, lgbm_probs)    
-    lgbm_fpr1 ,lgbm_tpr1, _ = roc_curve(ky1_test, lgbm_probs)
-    gmeans_lgbm1 = np.sqrt(lgbm_tpr1 * (1-lgbm_fpr1))
-    ix_lgbm1 = np.argmax(gmeans_lgbm1)
-    lgbm_gmean_1 = gmeans_lgbm1[ix_lgbm1]
+        outSeries = pd.Series()
 
-    lgbm.fit(kX2_traini,ky2_train)
-    lgbm_probs = lgbm.predict_proba(kX2_testi)[:,1]
-    lgbm_auc_2 = roc_auc_score(ky2_test, lgbm_probs)  
-    lgbm_fpr2 ,lgbm_tpr2, _ = roc_curve(ky2_test, lgbm_probs)
-    gmeans_lgbm2 = np.sqrt(lgbm_tpr2 * (1-lgbm_fpr2))
-    ix_lgbm2 = np.argmax(gmeans_lgbm2)
-    lgbm_gmean_2 = gmeans_lgbm2[ix_lgbm2]
+        lgbm.fit(kX0_traini,ky0_train)
+        lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
+        lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
 
-    lgbm.fit(kX3_traini,ky3_train)
-    lgbm_probs = lgbm.predict_proba(kX3_testi)[:,1]
-    lgbm_auc_3 = roc_auc_score(ky3_test, lgbm_probs)
-    lgbm_fpr3 ,lgbm_tpr3, _ = roc_curve(ky3_test, lgbm_probs)
-    gmeans_lgbm3 = np.sqrt(lgbm_tpr3 * (1-lgbm_fpr3))
-    ix_lgbm3 = np.argmax(gmeans_lgbm3)
-    lgbm_gmean_3 = gmeans_lgbm3[ix_lgbm3]
+        lgbm.fit(kX1_traini,ky1_train)
+        lgbm_probs = lgbm.predict_proba(kX1_testi)[:,1]
+        lgbm_auc_1 = roc_auc_score(ky1_test, lgbm_probs)    
 
-    lgbm.fit(kX4_traini,ky4_train)
-    lgbm_probs = lgbm.predict_proba(kX4_testi)[:,1]
-    lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
-    lgbm_fpr4 ,lgbm_tpr4, _ = roc_curve(ky4_test, lgbm_probs)
-    gmeans_lgbm4 = np.sqrt(lgbm_tpr4 * (1-lgbm_fpr4))
-    ix_lgbm4 = np.argmax(gmeans_lgbm4)
-    lgbm_gmean_4 = gmeans_lgbm4[ix_lgbm4]
+        lgbm.fit(kX2_traini,ky2_train)
+        lgbm_probs = lgbm.predict_proba(kX2_testi)[:,1]
+        lgbm_auc_2 = roc_auc_score(ky2_test, lgbm_probs)  
 
-    # Compute mean AUC of 5 folds
-    a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]
-    outSeries['AUC_ROC'] = round(np.mean(a),3)
+        lgbm.fit(kX3_traini,ky3_train)
+        lgbm_probs = lgbm.predict_proba(kX3_testi)[:,1]
+        lgbm_auc_3 = roc_auc_score(ky3_test, lgbm_probs)
 
-    # Compute mean G-mean of 5 folds
-    g = [lgbm_gmean_0, lgbm_gmean_1, lgbm_gmean_2, lgbm_gmean_3, lgbm_gmean_4] 
-    outSeries['G_Mean'] = round(np.mean(g),3)
-    return outSeries
+        lgbm.fit(kX4_traini,ky4_train)
+        lgbm_probs = lgbm.predict_proba(kX4_testi)[:,1]
+        lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
 
-with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
-    lgbm_fi_iter_Problem_FPs = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
-print("Maximum true AUC: ", lgbm_fi_iter_Problem_FPs["AUC_ROC"].max())  
-# Retrieve index with max AUC value 
-maxrowindex_FPs = lgbm_fi_iter_Problem_FPs["AUC_ROC"].idxmax()
+        # Compute mean AUC of 5 folds
+        a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]
+        outSeries['AUC_ROC'] = round(np.mean(a),3) 
+        return outSeries
+
+    with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
+        lgbm_fi_iter_Problem_FPs = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
+    max_auc = lgbm_fi_iter_Problem_FPs["AUC_ROC"].max()
+    with open(f'text_files/true_rand_{ijk}.txt', 'w') as f:
+        f.write(str(max_auc))
 
 
-# %%
-import random
+# In[ ]:
 
-def iter_random(i):
-        # Initialise LightGradientBoost Classifier
-    lgbm = LGBMClassifier(random_state = random.randrange(1, 10**10), n_jobs=-1, colsample_bytree=0.75)
 
-    outSeries = pd.Series()
 
-    kX0_traini, kX0_testi = kX0_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX0_test.iloc[:,result_3_lgbm[maxrowindex_FPs]]  
-    kX1_traini, kX1_testi = kX1_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX1_test.iloc[:,result_3_lgbm[maxrowindex_FPs]]  
-    kX2_traini, kX2_testi = kX2_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX2_test.iloc[:,result_3_lgbm[maxrowindex_FPs]]  
-    kX3_traini, kX3_testi = kX3_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX3_test.iloc[:,result_3_lgbm[maxrowindex_FPs]] 
-    kX4_traini, kX4_testi = kX4_train.iloc[:,result_3_lgbm[maxrowindex_FPs]], kX4_test.iloc[:,result_3_lgbm[maxrowindex_FPs]] 
 
-    lgbm.fit(kX0_traini,ky0_train)
-    lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
-    lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
-
-    lgbm.fit(kX1_traini,ky1_train)
-    lgbm_probs = lgbm.predict_proba(kX1_testi)[:,1]
-    lgbm_auc_1 = roc_auc_score(ky1_test, lgbm_probs)    
-
-    lgbm.fit(kX2_traini,ky2_train)
-    lgbm_probs = lgbm.predict_proba(kX2_testi)[:,1]
-    lgbm_auc_2 = roc_auc_score(ky2_test, lgbm_probs)  
-
-    lgbm.fit(kX3_traini,ky3_train)
-    lgbm_probs = lgbm.predict_proba(kX3_testi)[:,1]
-    lgbm_auc_3 = roc_auc_score(ky3_test, lgbm_probs)
-
-    lgbm.fit(kX4_traini,ky4_train)
-    lgbm_probs = lgbm.predict_proba(kX4_testi)[:,1]
-    lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
-
-    a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]    
-    outSeries['AUC_ROC'] = round(np.mean(a),3)
-    return outSeries
-    
-with tqdm_joblib(tqdm(desc="Percentage Completion", total=100)) as progress_bar:
-    lgbm_auc_rand_Problem_FPs = pd.DataFrame(Parallel(n_jobs=-1)(delayed(iter_random)(i) for i in range(100)))
-lgbm_auc_rand_Problem_FPs.to_csv('rand_auc.csv')
-
-# %%
-import matplotlib.pyplot as plt
-
-plt.rcParams['font.family'] = 'Times New Roman'
-plt.rcParams['font.size'] = 14
-
-boxprops = dict(facecolor='white', color='blue', linewidth=1)
-medianprops = dict(color='red')
-whiskerprops = dict(linestyle='--', dashes=(10, 5))
-flierprops = dict(marker='+', markerfacecolor='red', markersize=8, linestyle='none',
-                 markeredgewidth=1, markeredgecolor='red')
-
-plt.boxplot(lgbm_auc_rand_Problem_FPs, vert=True, widths=0.7, patch_artist=True, 
-            boxprops=boxprops, medianprops=medianprops, whiskerprops=whiskerprops,
-            flierprops=flierprops)
-
-# Set additional parameters
-plt.ylim(0.92, 0.98)  # Set y-axis limits
-plt.axhline(y=lgbm_fi_iter_Problem_FPs["AUC_ROC"].max(),
-            color='black', linestyle='-.')  # Horizontal line at mean position
-
-plt.xticks([])
-plt.xlabel('True Labels')
-plt.ylabel('AUC')
-plt.grid(axis='both')
-
-plt.show()
-
-# %%
-std_dev = lgbm_auc_rand_Problem_FPs['AUC_ROC'].std()
-std_dev
-
-# %%
-# https://docs.python.org/3/library/random.html
-
-# %%
