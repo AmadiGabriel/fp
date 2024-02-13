@@ -410,5 +410,5 @@ plt.grid(axis='both')
 plt.tight_layout()
 plt.savefig(f'permuted.jpg', dpi=500, bbox_inches='tight')
 # plt.show()
-
+plt.close()
 # %%

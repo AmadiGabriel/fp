@@ -1,0 +1,9 @@
+[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+[LightGBM] [Info] Number of positive: 127, number of negative: 1756
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.067253 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 328388
+[LightGBM] [Info] Number of data points in the train set: 1883, number of used features: 1288
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.067446 -> initscore=-2.626607
+[LightGBM] [Info] Start training from score -2.626607
+Percentage Completion:   0%|          | 0/100 [00:00<?, ?it/s]slurmstepd: error: *** JOB 728476 ON alice-node002 CANCELLED AT 2024-02-07T21:57:47 DUE TO TIME LIMIT ***
