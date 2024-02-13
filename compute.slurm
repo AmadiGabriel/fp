@@ -10,4 +10,4 @@
 #SBATCH --mail-user=agu1@le.ac.uk
 #SBATCH --export=NONE
 
-python3 permuted_rand_100.py
+python3 true_100_hpc.py

@@ -211,10 +211,10 @@ X3 = Xy3.drop('Fault', axis=1)
 # -----------------------------------------
 # Initialise LightGradientBoost Classifier
 
-for ijk in range(1,101):
+for ijk in range(53,101):
     random_seed = random.randrange(1, 10**10)
 
-    lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1, colsample_bytree=0.99)
+    lgbm = LGBMClassifier(n_jobs=-1, random_state=random_seed, colsample_bytree=0.99, verbosity=-1)
 
     # Undertake Feature Importance
     lgbm.fit(X3,y3)
@@ -259,6 +259,9 @@ for ijk in range(1,101):
 
         outSeries = pd.Series()
 
+        random_seed = random.randrange(1, 10**10)
+        lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1, colsample_bytree=0.99, verbosity=-1)
+
         lgbm.fit(kX0_traini,ky0_train)
         lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
         lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
@@ -285,7 +288,7 @@ for ijk in range(1,101):
         return outSeries
 
     with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
-        lgbm_fi_iter_Problem_FPs = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
+        lgbm_fi_iter_Problem_FPs = pd.DataFrame(Parallel(n_jobs=-1, prefer="threads")(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
     max_auc = lgbm_fi_iter_Problem_FPs["AUC_ROC"].max()
     with open(f'text_files/true_rand_{ijk}.txt', 'w') as f:
         f.write(str(max_auc))
