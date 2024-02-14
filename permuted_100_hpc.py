@@ -310,7 +310,7 @@ for ijk in range(1,101):
     with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
         lgbm_fi_iter_Problem_FPs = pd.DataFrame(Parallel(n_jobs=-1, prefer="threads")(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
     max_auc = lgbm_fi_iter_Problem_FPs["AUC_ROC"].max()
-    with open(f'text_files/permuted_rand_{ijk}.txt', 'w') as f:
+    with open(f'perm_files/permuted_rand_{ijk}.txt', 'w') as f:
         f.write(str(max_auc))
 
 
