@@ -6,10 +6,8 @@ n_iter = 1
 
 # -----------------------------------------
 # Loading required libraries
-from dependency_1 import tqdm_joblib
-from tqdm import tqdm
 from joblib import Parallel, delayed
-from dependency_2 import randomly_misclassify_labels
+from dependency import randomly_misclassify_labels
 import pandas as pd
 import numpy as np
 from numpy.random import RandomState
@@ -252,11 +250,8 @@ for rand in range(n_iter):
 #     y3 = pd.Series(misclassified_labels)
 #--------------------------------------------------
 #--------------------------------------------------
-
-
-    # Initialise LightGradientBoost Classifier
+    # Initialise LGBM Classifier        
     lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
-    
     # Undertake Feature Importance
     lgbm.fit(X3,y3)
     importance_1 = lgbm.feature_importances_
@@ -298,8 +293,7 @@ for rand in range(n_iter):
         kX4_traini, kX4_testi = kX4_train.iloc[:, idx_3], kX4_test.iloc[:, idx_3]  
 
         outSeries = pd.Series()
-        # Initialise LightGradientBoost Classifier at every iteration
-        lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
+
         lgbm.fit(kX0_traini,ky0_train)
         lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
         lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
@@ -326,8 +320,8 @@ for rand in range(n_iter):
         outSeries['AUC_ROC'] = round(np.mean(a),3)
 
         return outSeries
-    with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
-        lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
+
+    lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1, verbose=10)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
 
 print("Maximum permuted AUC: ", lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max())  
 
