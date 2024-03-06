@@ -31,7 +31,7 @@ source myenv/bin/activate  # For Unix/Linux
 
 ## Usage
 ```bash
-git clone https://github.com/amadiudu/fp.git
+git clone https://github.com/amadigabriel/fp.git
 cd fp
 pip install -r requirements.txt
 python main.py
