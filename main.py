@@ -7,7 +7,7 @@ n_iter = 1
 # -----------------------------------------
 # Loading required libraries
 from joblib import Parallel, delayed
-from dependency import randomly_misclassify_labels
+from dependency.mislabel import randomly_misclassify_labels
 import pandas as pd
 import numpy as np
 from numpy.random import RandomState
@@ -16,14 +16,14 @@ from sklearn.metrics import roc_auc_score, roc_curve
 from lightgbm import LGBMClassifier
 import warnings
 warnings.filterwarnings('ignore')
-random_seed = 1
+random_seed = 50
 
 # -----------------------------------------
 # Load all engine feature data
 dfs = [] # List to store data frames
 
 for i in range(1, 11):
-    filename = f'eng{i}.csv'
+    filename = f'engine_data/eng{i}.csv'
     df = pd.read_csv(filename)
     dfs.append(df)
 
@@ -35,6 +35,7 @@ df_d = df_d[df_d.columns.drop(['L_-b/2a True Airspeed (knots)','L_-b/2a CHT 3 (d
                                'D_-b/2a Oil Pressure (PSI)','L_-b/2a CHT 6 (deg C)',
                               'C_-b/2a Barometer Setting (inHg)','TO_-b/2a Barometer Setting (inHg)',
                                'L_-b/2a Barometer Setting (inHg)','D_-b/2a Barometer Setting (inHg)'])]
+
 
 # -----------------------------------------
 #Separate data classes into 3
