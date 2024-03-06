@@ -27,7 +27,7 @@ Use the following commands to create and activate a virtual environment:
 python3 -m venv myenv
 source myenv/bin/activate  # For Unix/Linux
 .\myenv\Scripts\activate   # For Windows
-
+```
 
 ## Usage
 
