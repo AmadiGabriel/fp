@@ -36,6 +36,10 @@ cd fp
 pip install -r requirements.txt
 python main.py
 ```
+In main.py:
+Uncomment code on the following lines to build the model from one instance of shuffled labels
+135 - 137, 145-148, 195 - 197, 206 -209 and 249 - 251.
+
 
 ## Libraries
 
