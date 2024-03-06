@@ -30,12 +30,12 @@ source myenv/bin/activate  # For Unix/Linux
 ```
 
 ## Usage
-
+```bash
 git clone https://github.com/amadiudu/fp.git
 cd fp
 pip install -r requirements.txt
 python main.py
-
+```
 
 ## Libraries
 
@@ -50,8 +50,8 @@ The following libraries are used in the Python file:
 ## File Structure
 
 - The file to run is `main.py`.
-- The dependency file for class mislabelling is located in the `dependency` folder named `mislabel.py`.
-- The engine data are located in the folder `engine_data`.
+- The dependency file for class mislabelling is located in the `dependency` folder named `mislabel.py`. This is called when the program is run.
+- The engine data are located in the folder `engine_data`. The files are called when the program is run.
 
 ## Research Paper
 
