@@ -323,8 +323,5 @@ for rand in range(n_iter):
         return outSeries
 
     lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1, verbose=10)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
-
-print("Maximum permuted AUC: ", lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max())  
-
-
+print("Maximum AUC: ", lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max())
 # %%
