@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-# %%
 permute = False # Set permute to True to build the model from one instance of shuffled labels
 
 n_iter = 1 # Set number of iterations for permutation (1 - 100)
