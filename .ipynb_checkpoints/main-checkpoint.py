@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 # %%
-# Set number of iterations for permutation (1 - 100)
-n_iter = 1
+permute = False # Set permute to True to build the model from one instance of shuffled labels
+
+n_iter = 1 # Set number of iterations for permutation (1 - 100)
 
 # -----------------------------------------
 # Loading required libraries
@@ -130,16 +131,14 @@ for rand in range(n_iter):
 
     all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
     y_df = all_df['Fault']
-    permute = False
-#--------------------------------------------------
-#--------------------------------------------------
-    ##Uncomment for permutation
-#     permute = True
-#     original_labels = y_df.to_numpy()
-#     misclassified_labels = randomly_misclassify_labels(original_labels)
-#     y_df = pd.Series(misclassified_labels)    
-#--------------------------------------------------
-#--------------------------------------------------
+    
+    if permute == True:
+   
+        original_labels = y_df.to_numpy()
+        misclassified_labels = randomly_misclassify_labels(original_labels)
+        y_df = pd.Series(misclassified_labels)    
+
+        
     x_df = all_df.drop('Fault', axis=1)
     if permute == True:
         x_df.reset_index(drop=True, inplace=True)
