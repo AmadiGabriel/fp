@@ -8,17 +8,15 @@ n_iter = 1
 # Loading required libraries
 from joblib import Parallel, delayed
 from dependency.mislabel import randomly_misclassify_labels
-from dependency.progress import tqdm_joblib
-from tqdm import tqdm
 import pandas as pd
 import numpy as np
+from numpy.random import RandomState
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, roc_curve
 from lightgbm import LGBMClassifier
 import warnings
 warnings.filterwarnings('ignore')
 random_seed = 219
-
 
 # -----------------------------------------
 # Load all engine feature data
@@ -38,6 +36,22 @@ df_d = df_d[df_d.columns.drop(['L_-b/2a True Airspeed (knots)','L_-b/2a CHT 3 (d
                               'C_-b/2a Barometer Setting (inHg)','TO_-b/2a Barometer Setting (inHg)',
                                'L_-b/2a Barometer Setting (inHg)','D_-b/2a Barometer Setting (inHg)'])]
 
+# #--------------------------------------------------
+# #--------------------------------------------------
+#     ##Uncomment for permutation
+Xallyall = df_d
+Xall = Xallyall.drop('Fault', axis=1)
+yall  = Xallyall['Fault']
+original_labels = yall.to_numpy() 
+misclassified_labels = randomly_misclassify_labels(original_labels)
+y = pd.Series(misclassified_labels)
+X = Xall    
+# X.reset_index(drop=True, inplace=True)
+# y.reset_index(drop=True, inplace=True)
+df_d = pd.concat([X, y], axis = 1)
+df_d.rename(columns={0: "Fault"}, inplace=True)
+# #--------------------------------------------------
+# #--------------------------------------------------
 
 # -----------------------------------------
 #Separate data classes into 3
@@ -130,22 +144,7 @@ for rand in range(n_iter):
 
     all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
     y_df = all_df['Fault']
-    permute = False
-#--------------------------------------------------
-#--------------------------------------------------
-    ##Uncomment for permutation
-#     permute = True
-#     original_labels = y_df.to_numpy()
-#     misclassified_labels = randomly_misclassify_labels(original_labels)
-#     y_df = pd.Series(misclassified_labels)    
-#--------------------------------------------------
-#--------------------------------------------------
     x_df = all_df.drop('Fault', axis=1)
-    if permute == True:
-        x_df.reset_index(drop=True, inplace=True)
-        y_df.reset_index(drop=True, inplace=True)
-        all_df = pd.concat([x_df, y_df], axis = 1)
-        all_df.rename(columns={0: "Fault"}, inplace=True)
     split_df = np.array_split(all_df, 5)  
     
     # Save each part as a separate DataFrame
@@ -185,19 +184,7 @@ for rand in range(n_iter):
 
     all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
     y_df = all_df['Fault']
-
-    if permute == True:
-        original_labels = y_df.to_numpy()
-        misclassified_labels = randomly_misclassify_labels(original_labels)
-        y_df = pd.Series(misclassified_labels)
-
     x_df = all_df.drop('Fault', axis=1)
-    if permute == True:
-        x_df.reset_index(drop=True, inplace=True)
-        y_df.reset_index(drop=True, inplace=True)
-        all_df = pd.concat([x_df, y_df], axis = 1)
-        all_df.rename(columns={0: "Fault"}, inplace=True)
-
     split_df = np.array_split(all_df, 5)
 
     # Save each part as a separate DataFrame
@@ -230,11 +217,6 @@ for rand in range(n_iter):
     Xy3['Fault'].replace({2: 1}, inplace = True) #Replace class 2 labels to 1
     y3 = Xy3['Fault']
     X3 = Xy3.drop('Fault', axis=1)
-
-    if permute == True:
-        original_labels = y3.to_numpy()
-        misclassified_labels = randomly_misclassify_labels(original_labels)
-        y3 = pd.Series(misclassified_labels)
 
     # Initialise LGBM Classifier        
     lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
@@ -306,7 +288,7 @@ for rand in range(n_iter):
         outSeries['AUC_ROC'] = round(np.mean(a),3)
 
         return outSeries
-    with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
-        lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
+
+    lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1, verbose=10)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
 print("Maximum AUC: ", lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max())
 # %%
