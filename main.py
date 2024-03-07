@@ -16,7 +16,7 @@ from sklearn.metrics import roc_auc_score, roc_curve
 from lightgbm import LGBMClassifier
 import warnings
 warnings.filterwarnings('ignore')
-random_seed = 50
+random_seed = 219
 
 # -----------------------------------------
 # Load all engine feature data
