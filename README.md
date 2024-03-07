@@ -37,7 +37,11 @@ pip install -r requirements.txt
 python3 main.py
 ```
 In main.py:
-Uncomment code on the following lines 137 - 140 to build the model from one instance of shuffled labels.
+Line 1, Set 
+```bash
+permute = True
+```
+to build the model from one instance of shuffled labels.
 
 
 ## Libraries
