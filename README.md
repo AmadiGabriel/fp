@@ -50,6 +50,7 @@ The following libraries are used in the Python file:
 - scikit-learn
 - lightgbm
 - warnings
+- tqdm
 
 ## File Structure
 
