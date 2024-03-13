@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 # %%
-permute = False # Set permute to True to build the model from one instance of shuffled labels
+permute = True # Set permute to True to build the model from one instance of shuffled labels
 
-n_iter = 1 # Set number of iterations for permutation (1 - 100)
+n_iter = 90 # Set number of iterations for permutation (1 - 100)
 
 # -----------------------------------------
 # Loading required libraries
 from joblib import Parallel, delayed
-from dependency.mislabel import randomly_misclassify_labels
 from dependency.progress import tqdm_joblib
 from tqdm import tqdm
 import pandas as pd
@@ -18,7 +17,7 @@ from sklearn.metrics import roc_auc_score, roc_curve
 from lightgbm import LGBMClassifier
 import warnings
 warnings.filterwarnings('ignore')
-random_seed = 219
+random_seed = 1
 
 
 # -----------------------------------------
@@ -39,201 +38,105 @@ df_d = df_d[df_d.columns.drop(['L_-b/2a True Airspeed (knots)','L_-b/2a CHT 3 (d
                               'C_-b/2a Barometer Setting (inHg)','TO_-b/2a Barometer Setting (inHg)',
                                'L_-b/2a Barometer Setting (inHg)','D_-b/2a Barometer Setting (inHg)'])]
 
+# Creating table to populate results
+Case_1_3_lgbm_fi_casc = pd.DataFrame({'Case': [],'Model': [], 'FS_Type': [],'AUC_ROC': []})
 
-# -----------------------------------------
-#Separate data classes into 3
-Xy = df_d
+for rand in range(n_iter):  
 
-# -----------------------------------------
-#Class 0
-Xy0 = Xy[Xy.Fault == 0]
-y0 = Xy0['Fault']
-X0 = Xy0.drop('Fault', axis=1)
+    # -----------------------------------------
+    Xy = df_d.sample(frac=1, random_state=random_seed).reset_index(drop=True)
 
-# -----------------------------------------
-#Class 1
-Xy1 = Xy[Xy.Fault == 1]
-y1 = Xy1['Fault']
-X1 = Xy1.drop('Fault', axis=1)
+    if permute == True:   
+        y = Xy['Fault'].values
+        np.random.seed(rand) 
+        np.random.shuffle(y)
+        Xy['Fault'] = y
 
-# -----------------------------------------
-#Class 2
-Xy2 = Xy[Xy.Fault == 2]
-Xy2['Fault'].replace({2: 1}, inplace = True)
-y2 = Xy2['Fault']
-X2 = Xy2.drop('Fault', axis=1)
+    #Separate data classes into 3
+    # -----------------------------------------
+    #Class 0
+    Xy0 = Xy[Xy.Fault == 0]
+    X0, y0 = Xy0.drop('Fault', axis=1), Xy0['Fault']
 
-# -----------------------------------------
-# Split Class 0 into 5 folds:
-# Fold 1
-X_train, X_test_1, y_train, y_test_1 = train_test_split(X0, y0, test_size=0.2, random_state=random_seed)
-cv_0_0 = pd.concat([X_test_1,y_test_1], axis=1)
+    #Class 1
+    Xy1 = Xy[Xy.Fault == 1]
+    X1, y1 = Xy1.drop('Fault', axis=1), Xy1['Fault']
 
-# Fold 2
-X_train, X_test_2, y_train, y_test_2 = train_test_split(X_train,y_train, test_size=0.25, random_state=random_seed)
-cv_0_1 = pd.concat([X_test_2,y_test_2], axis=1) 
+    #Class 2
+    Xy2 = Xy[Xy.Fault == 2]
+    X2, y2 = Xy2.drop('Fault', axis=1), Xy2['Fault']
+    # -----------------------------------------
 
-# Fold 3
-X_train, X_test_3, y_train, y_test_3 = train_test_split(X_train,y_train, test_size=0.33, random_state=random_seed)
-cv_0_2 = pd.concat([X_test_3,y_test_3], axis=1) 
+    # Calculate the indices for splitting into 5 equal parts
+    indices0, indices1, indices2  = (np.linspace(0, len(Xy0), num=6, dtype=int), 
+                                     np.linspace(0, len(Xy1), num=6, dtype=int),
+                                     np.linspace(0, len(Xy2), num=6, dtype=int))
 
-# Fold 4 and 5
-X_train, X_test_4, y_train, y_test_4 = train_test_split(X_train,y_train, test_size=0.50, random_state=random_seed)
-cv_0_3 = pd.concat([X_test_4,y_test_4], axis=1) 
-cv_0_4 = pd.concat([X_train,y_train], axis=1) 
+    # -----------------------------------------
+    ## Split Classes into 5 folds
+    split_dfs0 = [Xy0.iloc[indices0[i]:indices0[i+1]] for i in range(len(indices0)-1)]
+    cv_0_0, cv_0_1, cv_0_2, cv_0_3, cv_0_4 = split_dfs0
 
-# -----------------------------------------
-# Split Class 1 into 5 folds:
-# Fold 1
-X_train, X_test_1, y_train, y_test_1 = train_test_split(X1, y1, test_size=0.2, random_state=random_seed)
-cv_1_0 = pd.concat([X_test_1,y_test_1], axis=1)
+    split_dfs1 = [Xy1.iloc[indices1[i]:indices1[i+1]] for i in range(len(indices1)-1)]
+    cv_1_0, cv_1_1, cv_1_2, cv_1_3, cv_1_4 = split_dfs1
 
-# Fold 2
-X_train, X_test_2, y_train, y_test_2 = train_test_split(X_train,y_train, test_size=0.25, random_state=random_seed)
-cv_1_1 = pd.concat([X_test_2,y_test_2], axis=1) 
+    split_dfs2 = [Xy2.iloc[indices2[i]:indices2[i+1]] for i in range(len(indices2)-1)]
+    cv_2_0, cv_2_1, cv_2_2, cv_2_3, cv_2_4 = split_dfs2
+    # Set up training folds using classes 0, 1 and 2; shuffle rows and reset indexes
+    tr_cv_0 = pd.concat([cv_0_0, cv_1_0, cv_2_0], axis = 0)
+    tr_cv_1 = pd.concat([cv_0_1, cv_1_1, cv_2_1], axis = 0)
+    tr_cv_2 = pd.concat([cv_0_2, cv_1_2, cv_2_2], axis = 0)
+    tr_cv_3 = pd.concat([cv_0_3, cv_1_3, cv_2_3], axis = 0)
+    tr_cv_4 = pd.concat([cv_0_4, cv_1_4, cv_2_4], axis = 0)
 
-# Fold 3
-X_train, X_test_3, y_train, y_test_3 = train_test_split(X_train,y_train, test_size=0.33, random_state=random_seed)
-cv_1_2 = pd.concat([X_test_3,y_test_3], axis=1) 
-
-# Fold 4 and 5
-X_train, X_test_4, y_train, y_test_4 = train_test_split(X_train,y_train, test_size=0.50, random_state=random_seed)
-cv_1_3 = pd.concat([X_test_4,y_test_4], axis=1) 
-cv_1_4 = pd.concat([X_train,y_train], axis=1) 
-
-# -----------------------------------------
-# Split Class 2 into 5 folds:
-# Fold 1
-X_train, X_test_1, y_train, y_test_1 = train_test_split(X2, y2, test_size=0.2, random_state=random_seed)
-cv_2_0 = pd.concat([X_test_1,y_test_1], axis=1)
-
-# Fold 2
-X_train, X_test_2, y_train, y_test_2 = train_test_split(X_train,y_train, test_size=0.25, random_state=random_seed)
-cv_2_1 = pd.concat([X_test_2,y_test_2], axis=1) 
-
-# Fold 3
-X_train, X_test_3, y_train, y_test_3 = train_test_split(X_train,y_train, test_size=0.33, random_state=random_seed)
-cv_2_2 = pd.concat([X_test_3,y_test_3], axis=1) 
-
-# Fold 4 and 5
-X_train, X_test_4, y_train, y_test_4 = train_test_split(X_train,y_train, test_size=0.50, random_state=random_seed)
-cv_2_3 = pd.concat([X_test_4,y_test_4], axis=1) 
-cv_2_4 = pd.concat([X_train,y_train], axis=1)
-
-for rand in range(n_iter):   
-
-    # Set up training folds using classes 0, 1 and 2
-    cv_0 = pd.concat([cv_0_0, cv_1_0, cv_2_0], axis = 0)
-    cv_1 = pd.concat([cv_0_1, cv_1_1, cv_2_1], axis = 0)
-    cv_2 = pd.concat([cv_0_2, cv_1_2, cv_2_2], axis = 0)
-    cv_3 = pd.concat([cv_0_3, cv_1_3, cv_2_3], axis = 0)
-    cv_4 = pd.concat([cv_0_4, cv_1_4, cv_2_4], axis = 0)
-
-    all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
-    y_df = all_df['Fault']
-    
-    if permute == True:
-   
-        original_labels = y_df.to_numpy()
-        misclassified_labels = randomly_misclassify_labels(original_labels)
-        y_df = pd.Series(misclassified_labels)    
-
-        
-    x_df = all_df.drop('Fault', axis=1)
-    if permute == True:
-        x_df.reset_index(drop=True, inplace=True)
-        y_df.reset_index(drop=True, inplace=True)
-        all_df = pd.concat([x_df, y_df], axis = 1)
-        all_df.rename(columns={0: "Fault"}, inplace=True)
-    split_df = np.array_split(all_df, 5)  
-    
-    # Save each part as a separate DataFrame
-    cv_0, cv_1, cv_2, cv_3, cv_4 = split_df
-
-
-    k_fold_train_0 = pd.concat([cv_0, cv_1, cv_2, cv_3], axis = 0) #skip 4
-    ky0_train = k_fold_train_0['Fault']
+    k_fold_train_0 = pd.concat([tr_cv_0, tr_cv_1, tr_cv_2, tr_cv_3], axis = 0) #skip 4
+    ky0_train = k_fold_train_0['Fault'].replace({2: 1})
     kX0_train = k_fold_train_0.drop('Fault', axis=1)
 
-
-    k_fold_train_1 = pd.concat([cv_0, cv_1, cv_2, cv_4], axis = 0) #skip 3
-    ky1_train = k_fold_train_1['Fault']
+    k_fold_train_1 = pd.concat([tr_cv_0, tr_cv_1, tr_cv_2, tr_cv_4], axis = 0) #skip 3
+    ky1_train = k_fold_train_1['Fault'].replace({2: 1})
     kX1_train = k_fold_train_1.drop('Fault', axis=1)
 
-
-    k_fold_train_2 = pd.concat([cv_0, cv_1, cv_3, cv_4], axis = 0) #skip 2
-    ky2_train = k_fold_train_2['Fault']
+    k_fold_train_2 = pd.concat([tr_cv_0, tr_cv_1, tr_cv_3, tr_cv_4], axis = 0) #skip 2
+    ky2_train = k_fold_train_2['Fault'].replace({2: 1})
     kX2_train = k_fold_train_2.drop('Fault', axis=1)
 
-
-    k_fold_train_3 = pd.concat([cv_0, cv_2, cv_3, cv_4], axis = 0) #skip 1
-    ky3_train = k_fold_train_3['Fault']
+    k_fold_train_3 = pd.concat([tr_cv_0, tr_cv_2, tr_cv_3, tr_cv_4], axis = 0) #skip 1
+    ky3_train = k_fold_train_3['Fault'].replace({2: 1})
     kX3_train = k_fold_train_3.drop('Fault', axis=1)
 
-
-    k_fold_train_4 = pd.concat([cv_1, cv_2, cv_3, cv_4], axis = 0) #skip 0
-    ky4_train = k_fold_train_4['Fault']
+    k_fold_train_4 = pd.concat([tr_cv_1, tr_cv_2, tr_cv_3, tr_cv_4], axis = 0) #skip 0
+    ky4_train = k_fold_train_4['Fault'].replace({2: 1})
     kX4_train = k_fold_train_4.drop('Fault', axis=1)
 
-    # Set up validation folds using classes 0 and 1
-    cv_0 = pd.concat([cv_0_0, cv_1_0], axis = 0)
-    cv_1 = pd.concat([cv_0_1, cv_1_1], axis = 0)
-    cv_2 = pd.concat([cv_0_2, cv_1_2], axis = 0)
-    cv_3 = pd.concat([cv_0_3, cv_1_3], axis = 0)
-    cv_4 = pd.concat([cv_0_4, cv_1_4], axis = 0)
+    # Set up test folds using classes 0 and 1; shuffle rows and reset indexes
+    te_cv_0 = pd.concat([cv_0_0, cv_1_0], axis = 0)
+    te_cv_1 = pd.concat([cv_0_1, cv_1_1], axis = 0)
+    te_cv_2 = pd.concat([cv_0_2, cv_1_2], axis = 0)
+    te_cv_3 = pd.concat([cv_0_3, cv_1_3], axis = 0)
+    te_cv_4 = pd.concat([cv_0_4, cv_1_4], axis = 0)
 
-    all_df = pd.concat([cv_0, cv_1, cv_2, cv_3, cv_4], axis = 0)
-    y_df = all_df['Fault']
-
-    if permute == True:
-        original_labels = y_df.to_numpy()
-        misclassified_labels = randomly_misclassify_labels(original_labels)
-        y_df = pd.Series(misclassified_labels)
-
-    x_df = all_df.drop('Fault', axis=1)
-    if permute == True:
-        x_df.reset_index(drop=True, inplace=True)
-        y_df.reset_index(drop=True, inplace=True)
-        all_df = pd.concat([x_df, y_df], axis = 1)
-        all_df.rename(columns={0: "Fault"}, inplace=True)
-
-    split_df = np.array_split(all_df, 5)
-
-    # Save each part as a separate DataFrame
-    cv_0, cv_1, cv_2, cv_3, cv_4 = split_df
-
-
-    k_fold_test_0 = cv_4 #include 4
+    k_fold_test_0 = te_cv_4 #include 4
     ky0_test = k_fold_test_0['Fault']
-    kX0_test =k_fold_test_0.drop('Fault', axis=1)
+    kX0_test = k_fold_test_0.drop('Fault', axis=1)
 
-    k_fold_test_1 = cv_3 #include 3
+    k_fold_test_1 = te_cv_3 #include 3
     ky1_test = k_fold_test_1['Fault']
-    kX1_test =k_fold_test_1.drop('Fault', axis=1)
+    kX1_test = k_fold_test_1.drop('Fault', axis=1)
 
-    k_fold_test_2 = cv_2 #include 2
+    k_fold_test_2 = te_cv_2 #include 2
     ky2_test = k_fold_test_2['Fault']
-    kX2_test =k_fold_test_2.drop('Fault', axis=1)
+    kX2_test = k_fold_test_2.drop('Fault', axis=1)
 
-    k_fold_test_3 = cv_1 #include 1
+    k_fold_test_3 = te_cv_1 #include 1
     ky3_test = k_fold_test_3['Fault']
-    kX3_test =k_fold_test_3.drop('Fault', axis=1)
+    kX3_test = k_fold_test_3.drop('Fault', axis=1)
 
-    k_fold_test_4 = cv_0 #include 0
+    k_fold_test_4 = te_cv_0 #include 0
     ky4_test = k_fold_test_4['Fault']
-    kX4_test =k_fold_test_4.drop('Fault', axis=1)
+    kX4_test = k_fold_test_4.drop('Fault', axis=1)
 
-
-    # Feature Importance Computation
-    Xy3 = df_d
-    Xy3['Fault'].replace({2: 1}, inplace = True) #Replace class 2 labels to 1
-    y3 = Xy3['Fault']
-    X3 = Xy3.drop('Fault', axis=1)
-
-    if permute == True:
-        original_labels = y3.to_numpy()
-        misclassified_labels = randomly_misclassify_labels(original_labels)
-        y3 = pd.Series(misclassified_labels)
+    X3, y3 = Xy.drop('Fault', axis=1), Xy['Fault'].replace({2: 1}) 
 
     # Initialise LGBM Classifier        
     lgbm = LGBMClassifier(random_state=random_seed, n_jobs=-1)
@@ -253,7 +156,7 @@ for rand in range(n_iter):
     Feature_Lenght_1= len(aa_1) +1
     result_1 = []
     cols_1 = []
-    
+
     # Build feature array
     for i in range(Feature_Lenght_1):
         cols_1 = aa_1[0:i]
@@ -262,14 +165,11 @@ for rand in range(n_iter):
 
     if len(result_3_lgbm) < 100:
         num_features = len(result_3_lgbm)
-
     else:
         num_features = 100
 
-
     # Feature selection based on feature array
     def Problem_FPs_lgbm(i):
-
         idx_3 = result_3_lgbm[i] 
         kX0_traini, kX0_testi = kX0_train.iloc[:, idx_3], kX0_test.iloc[:, idx_3] 
         kX1_traini, kX1_testi = kX1_train.iloc[:, idx_3], kX1_test.iloc[:, idx_3] 
@@ -278,7 +178,6 @@ for rand in range(n_iter):
         kX4_traini, kX4_testi = kX4_train.iloc[:, idx_3], kX4_test.iloc[:, idx_3]  
 
         outSeries = pd.Series()
-
         lgbm.fit(kX0_traini,ky0_train)
         lgbm_probs = lgbm.predict_proba(kX0_testi)[:,1]
         lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
@@ -299,13 +198,80 @@ for rand in range(n_iter):
         lgbm_probs = lgbm.predict_proba(kX4_testi)[:,1]
         lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
 
-
         # Compute mean AUC of 5 folds
         a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]
         outSeries['AUC_ROC'] = round(np.mean(a),3)
 
         return outSeries
     with tqdm_joblib(tqdm(desc="Percentage Completion", total=num_features)) as progress_bar:
-        lgbm_fi_iter_Problem_FPs_permuted_rand_1 = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
-print("Maximum AUC: ", lgbm_fi_iter_Problem_FPs_permuted_rand_1["AUC_ROC"].max())
+        Case_3_lgbm = pd.DataFrame(Parallel(n_jobs=-1)(delayed(Problem_FPs_lgbm)(i) for i in range(num_features)))
+ 
+    maxrowindex = Case_3_lgbm["AUC_ROC"].idxmax()
+    Case_1_3_lgbm_fi_casc.loc[0,['FS_Type']] = 'lgbm_fi_casc' # CHECK FEATURE IMPORTANCE TYPE USED
+    Case_1_3_lgbm_fi_casc.loc[0,['Case']] = '3'
+    Case_1_3_lgbm_fi_casc.loc[0,['Class']] = '0 and 1s2'
+    Case_1_3_lgbm_fi_casc.loc[0,['Model']] = 'lgbm'
+
+    kX0_traini = kX0_train.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX1_traini = kX1_train.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX2_traini = kX2_train.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX3_traini = kX3_train.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX4_traini = kX4_train.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+
+    kX0_testi = kX0_test.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX1_testi = kX1_test.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX2_testi = kX2_test.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX3_testi = kX3_test.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+    kX4_testi = kX4_test.iloc[:,result_3_lgbm[maxrowindex]] #fi_thresh_iterest
+
+    lgbm.fit(kX0_traini,ky0_train)
+
+    # Prediction Probabilities
+    lgbm_probs = lgbm.predict_proba(kX0_testi)
+
+    #keep probabilities for the positive outcome only (1)
+    lgbm_probs = lgbm_probs[:,1]
+
+    # Calculate AUC_ROC
+    lgbm_auc_0 = roc_auc_score(ky0_test, lgbm_probs)
+    lgbm_fpr0 ,lgbm_tpr0, _ = roc_curve(ky0_test, lgbm_probs, pos_label=1)
+
+    lgbm.fit(kX1_traini,ky1_train)
+    lgbm_probs = lgbm.predict_proba(kX1_testi)
+    lgbm_probs = lgbm_probs[:,1]
+    lgbm_auc_1 = roc_auc_score(ky1_test, lgbm_probs)    
+    lgbm_fpr1 ,lgbm_tpr1, _ = roc_curve(ky1_test, lgbm_probs, pos_label=1)
+
+    lgbm.fit(kX2_traini,ky2_train)
+    lgbm_probs = lgbm.predict_proba(kX2_testi)
+    lgbm_probs = lgbm_probs[:,1]
+    lgbm_auc_2 = roc_auc_score(ky2_test, lgbm_probs)  
+    lgbm_fpr2 ,lgbm_tpr2, _ = roc_curve(ky2_test, lgbm_probs, pos_label=1)
+
+    lgbm.fit(kX3_traini,ky3_train)
+    lgbm_probs = lgbm.predict_proba(kX3_testi)
+    lgbm_probs = lgbm_probs[:,1]
+    lgbm_auc_3 = roc_auc_score(ky3_test, lgbm_probs)
+    lgbm_fpr3 ,lgbm_tpr3, _ = roc_curve(ky3_test, lgbm_probs, pos_label=1)
+
+    lgbm.fit(kX4_traini,ky4_train)
+    lgbm_probs = lgbm.predict_proba(kX4_testi)
+    lgbm_probs = lgbm_probs[:,1]
+    lgbm_auc_4 = roc_auc_score(ky4_test, lgbm_probs)
+    lgbm_fpr4 ,lgbm_tpr4, _ = roc_curve(ky4_test, lgbm_probs, pos_label=1)
+
+    a = [lgbm_auc_0, lgbm_auc_1, lgbm_auc_2, lgbm_auc_3, lgbm_auc_4]
+    Case_1_3_lgbm_fi_casc.loc[0,['AUC_ROC']] = [str("%.3f" % np.mean(a))]
+
+    tpr = [lgbm_tpr0, lgbm_tpr1, lgbm_tpr2, lgbm_tpr3, lgbm_tpr4]
+    fpr = [lgbm_fpr0, lgbm_fpr1, lgbm_fpr2, lgbm_fpr3, lgbm_fpr4]
+
+    Case_1_3_lgbm_fi_casc.to_csv(f'rand_auc_case3/new_lgbm_fi_casc_Case_3_misclass_rand_{str(rand)}.csv', index=False)
+
+    # Save True and False Positive Rates for AUC Plot
+    df_fpr, df_tpr = pd.DataFrame(fpr), pd.DataFrame(tpr)
+    df_fpr_T, df_tpr_T  =  df_fpr.T, df_tpr.T
+    df_fpr_T.columns, df_tpr_T.columns  =['fpr_0','fpr_1','fpr_2','fpr_3','fpr_4'], ['tpr_0','tpr_1','tpr_2','tpr_3','tpr_4']
+    df = pd.concat([df_fpr_T, df_tpr_T], axis=1)
+    df.to_csv(f'rand_ftpr_case3/new_lgbm_fi_casc_ftpr_Case_3_nr_misclass_rand_{str(rand)}.csv', index=False)
 # %%
