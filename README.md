@@ -58,7 +58,7 @@ The following libraries are used in the Python file:
 ## File Structure
 
 - The file to run is `main.py`.
-- The dependency file for class mislabelling is located in the `dependency` folder named `mislabel.py`. This is called when the program is run.
+- A dependency file to show the progress of the execution of the main.py is located in the `dependency` folder named `progress.py`. This function called when the program is run.
 - The engine data are located in the folder `engine_data`. The files are called when the program is run.
 
 ## Research Paper
