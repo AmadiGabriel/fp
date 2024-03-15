@@ -1,0 +1,1577 @@
+Features,Score,Std
+D_Kurtosis CHT 1 (deg C),0.002822580645161288,0.0017982645376693064
+D_Kurtosis Pitch (deg),0.0025537634408602126,0.0017982645376693064
+D_Skewness OIL TEMPERATURE (deg C),0.0024193548387096754,0.0008064516129032252
+TO_RMS ALT CONTACT (V),0.0021505376344086004,0.0010752688172043002
+C_RMS Angle of Attack (%),0.0021505376344086004,0.0010752688172043004
+L_CoV Fuel Flow 1 (gal/hr),0.0020161290322580627,0.001876913984377544
+TO_Mean EGT 4 (deg C),0.0020161290322580627,0.0018769139843775441
+D_CoV CABIN TEMPERATURE (deg C),0.0018817204301075253,0.0012318751868160849
+L_-b/2a CHT 4 (deg C),0.0018817204301075253,0.001496710850223123
+TO_Kurtosis Fuel Level L (gal),0.0017473118279569878,0.0012821763459905172
+L_c FUEL CONTACT (V),0.0017473118279569878,0.0012821763459905172
+L_Mean EGT 1 (deg C),0.0017473118279569878,0.0012821763459905172
+D_a Fuel Flow 1 (gal/hr),0.0017473118279569878,0.0015383767664327401
+L_c EGT 5 (deg C),0.00161290322580645,0.0013169299692382666
+L_SF Manifold Pressure (inHg),0.0014784946236559126,0.0013373487057884664
+D_c RPM L,0.0014784946236559126,0.0013373487057884664
+L_CoV Angle of Attack (%),0.0014784946236559126,0.0013373487057884664
+C_Kurtosis Angle of Attack (%),0.0014784946236559126,0.0013373487057884664
+L_a CANOPY CONTACT (V),0.0013440860215053752,0.0013440860215053752
+D_CoV Fuel Remaining (gal),0.0013440860215053752,0.0013440860215053752
+L_Kurtosis CHT 5 (deg C),0.0013440860215053752,0.0013440860215053752
+L_CoV EGT 3 (deg C),0.0013440860215053752,0.001590344027714949
+L_Kurtosis Pitch (deg),0.0013440860215053752,0.0013440860215053752
+L_SF Pressure Altitude (ft),0.0013440860215053752,0.0013440860215053752
+L_c CHT 1 (deg C),0.0012096774193548377,0.0013373487057884664
+D_Mean EGT 3 (deg C),0.0012096774193548377,0.0013373487057884664
+L_Mean OAT (deg C),0.0012096774193548377,0.0013373487057884664
+C_c CHT 6 (deg C),0.0012096774193548377,0.001584654048730052
+L_Kurtosis CABIN TEMPERATURE (deg C),0.0012096774193548377,0.0019890656702888075
+L_MeanF Manifold Pressure (inHg),0.0012096774193548377,0.0013373487057884664
+TO_SF Manifold Pressure (inHg),0.0012096774193548377,0.001584654048730052
+TO_Mean Volts 1,0.0012096774193548377,0.0013373487057884664
+D_Kurtosis EGT Leaning State,0.0012096774193548377,0.0017982645376693066
+L_CoV EGT 6 (deg C),0.0012096774193548377,0.0013373487057884664
+L_Mean Fuel Flow 1 (gal/hr),0.0012096774193548377,0.001584654048730052
+D_MedF Oil Pressure (PSI),0.0010752688172043002,0.0015674601867863697
+C_Kurtosis Fuel Level L (gal),0.0010752688172043002,0.0013169299692382666
+L_RMS Angle of Attack (%),0.0010752688172043002,0.0013169299692382666
+L_SF EGT 3 (deg C),0.0010752688172043002,0.0013169299692382666
+D_Skewness Fuel Level L (gal),0.0010752688172043002,0.0015674601867863697
+C_Mean ALT CONTACT (V),0.0010752688172043002,0.0013169299692382666
+C_a ALT CONTACT (V),0.0010752688172043002,0.0013169299692382666
+D_CoV ALT CONTACT (V),0.0010752688172043002,0.0013169299692382666
+L_a True Airspeed (knots),0.0010752688172043002,0.0015674601867863697
+TO_Kurtosis Fuel Level R (gal),0.0010752688172043002,0.0015674601867863697
+D_Mean Oil Pressure (PSI),0.0010752688172043002,0.0015674601867863697
+D_Kurtosis CHT 3 (deg C),0.0010752688172043002,0.0013169299692382666
+D_Mean EGT Leaning State,0.0010752688172043002,0.0013169299692382666
+D_Mean Pitch (deg),0.0010752688172043002,0.0015674601867863697
+L_c CHT 3 (deg C),0.0010752688172043002,0.0013169299692382666
+L_a OIL TEMPERATURE (deg C),0.0010752688172043002,0.0017831316077179553
+L_Mean Oil Pressure (PSI),0.0010752688172043002,0.0013169299692382666
+C_MeanF Oil Pressure (PSI),0.0010752688172043002,0.0015674601867863697
+L_RMS CHT 6 (deg C),0.0010752688172043002,0.0013169299692382666
+L_SF CHT 5 (deg C),0.0009408602150537626,0.0012821763459905172
+C_Mean Manifold Pressure (inHg),0.0009408602150537626,0.0012821763459905172
+C_Mean EGT 5 (deg C),0.0009408602150537626,0.00153837676643274
+TO_a Fuel Level R (gal),0.0009408602150537626,0.0012821763459905172
+C_Mean Angle of Attack (%),0.0009408602150537626,0.0012821763459905172
+C_Skewness EGT 4 (deg C),0.0009408602150537626,0.0012821763459905172
+D_RMS CHT 5 (deg C),0.0009408602150537626,0.0012821763459905172
+TO_a OAT (deg C),0.0009408602150537626,0.0012821763459905172
+L_c Pressure Altitude (ft),0.0009408602150537626,0.0012821763459905172
+L_-b/2a EGT 3 (deg C),0.0009408602150537626,0.0012821763459905172
+L_CoV FUEL CONTACT (V),0.0009408602150537626,0.0012821763459905172
+D_Skewness CANOPY CONTACT (V),0.0009408602150537626,0.0012821763459905172
+C_MeanF Volts 1,0.0009408602150537626,0.0012821763459905172
+TO_Mean CHT 5 (deg C),0.0009408602150537626,0.0012821763459905172
+D_CoV Barometer Setting (inHg),0.0009408602150537626,0.00153837676643274
+D_Kurtosis Amps,0.000806451612903225,0.0012318751868160849
+L_Skewness CHT 3 (deg C),0.000806451612903225,0.0012318751868160849
+C_RMS OAT (deg C),0.000806451612903225,0.0012318751868160849
+C_Mean FUEL CONTACT (V),0.000806451612903225,0.0012318751868160849
+L_CoV Fuel Remaining (gal),0.000806451612903225,0.0012318751868160849
+D_a Volts 1,0.000806451612903225,0.0012318751868160849
+C_-b/2a CHT 1 (deg C),0.000806451612903225,0.0012318751868160849
+D_Kurtosis Fuel Flow 1 (gal/hr),0.000806451612903225,0.0012318751868160849
+TO_Mean Angle of Attack (%),0.000806451612903225,0.0012318751868160849
+D_Mean FUEL CONTACT (V),0.000806451612903225,0.0012318751868160849
+C_a CHT 5 (deg C),0.000806451612903225,0.001231875186816085
+L_Kurtosis EGT 1 (deg C),0.000806451612903225,0.0012318751868160849
+L_c EGT 3 (deg C),0.000806451612903225,0.0012318751868160849
+TO_Skewness Fuel Flow 1 (gal/hr),0.000806451612903225,0.0012318751868160849
+TO_Skewness Fuel Pressure (PSI),0.000806451612903225,0.0012318751868160849
+L_Kurtosis EGT 2 (deg C),0.000806451612903225,0.0012318751868160849
+D_Mean CANOPY CONTACT (V),0.000806451612903225,0.0012318751868160849
+TO_CoV Fuel Remaining (gal),0.000806451612903225,0.0012318751868160849
+L_Mean CHT 5 (deg C),0.000806451612903225,0.001496710850223123
+C_-b/2a RPM L,0.000806451612903225,0.0012318751868160849
+TO_Skewness OIL TEMPERATURE (deg C),0.000806451612903225,0.0012318751868160849
+C_Skewness Barometer Setting (inHg),0.000806451612903225,0.0012318751868160849
+L_Mean CHT 4 (deg C),0.000806451612903225,0.0012318751868160849
+L_Skewness Percent Power,0.000806451612903225,0.0012318751868160849
+TO_-b/2a RPM L,0.000806451612903225,0.0012318751868160849
+L_Mean EGT 3 (deg C),0.000806451612903225,0.0012318751868160849
+C_a EGT 6 (deg C),0.000806451612903225,0.0012318751868160849
+C_Mean Pitch (deg),0.0006720430107526876,0.001164012639495212
+D_c Angle of Attack (%),0.0006720430107526876,0.001164012639495212
+L_MedF Percent Power,0.0006720430107526876,0.0014413716794037096
+L_Mean Fuel Pressure (PSI),0.0006720430107526876,0.001164012639495212
+C_Mean EGT 1 (deg C),0.0006720430107526876,0.001164012639495212
+D_Kurtosis True Airspeed (knots),0.0006720430107526876,0.001164012639495212
+D_Kurtosis Pressure Altitude (ft),0.0006720430107526876,0.001164012639495212
+L_Mean Angle of Attack (%),0.0006720430107526876,0.001164012639495212
+C_CoV Volts 1,0.0006720430107526876,0.001164012639495212
+C_Skewness Fuel Pressure (PSI),0.0006720430107526876,0.0014413716794037096
+L_SF ALT CONTACT (V),0.0006720430107526876,0.001164012639495212
+L_Kurtosis RPM L,0.0006720430107526876,0.001164012639495212
+L_Kurtosis EGT Leaning State,0.0006720430107526876,0.001164012639495212
+L_a Fuel Flow 1 (gal/hr),0.0006720430107526876,0.001164012639495212
+L_Kurtosis CHT 1 (deg C),0.0006720430107526876,0.001164012639495212
+C_Skewness Fuel Level L (gal),0.0006720430107526876,0.001164012639495212
+D_c Fuel Remaining (gal),0.0005376344086021501,0.0010752688172043002
+TO_Mean Fuel Pressure (PSI),0.0005376344086021501,0.0010752688172043004
+L_Mean Pitch (deg),0.0005376344086021501,0.0010752688172043004
+D_MedF Percent Power,0.0005376344086021501,0.0010752688172043004
+TO_Skewness RPM L,0.0005376344086021501,0.0010752688172043004
+TO_Mean OIL TEMPERATURE (deg C),0.0005376344086021501,0.0010752688172043004
+L_Skewness CHT 6 (deg C),0.0005376344086021501,0.0010752688172043004
+D_RMS EGT Leaning State,0.0005376344086021501,0.00137070417032064
+L_SF Pitch (deg),0.0005376344086021501,0.0010752688172043004
+TO_MeanF OAT (deg C),0.0005376344086021501,0.0010752688172043004
+TO_-b/2a CABIN TEMPERATURE (deg C),0.0005376344086021501,0.0010752688172043004
+L_Mean CABIN TEMPERATURE (deg C),0.0005376344086021501,0.0010752688172043004
+D_Mean Pressure Altitude (ft),0.0005376344086021501,0.0010752688172043004
+L_Mean CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+C_Kurtosis CHT 5 (deg C),0.0004032258064516125,0.0009598694124385543
+C_Mean Fuel Pressure (PSI),0.0004032258064516125,0.0009598694124385543
+C_c Fuel Level L (gal),0.0004032258064516125,0.0009598694124385543
+D_a ALT CONTACT (V),0.0004032258064516125,0.0009598694124385543
+D_-b/2a CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+L_MeanF CABIN TEMPERATURE (deg C),0.0004032258064516125,0.0009598694124385543
+D_MedF CANOPY CONTACT (V),0.0004032258064516125,0.0009598694124385543
+D_RMS CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+L_-b/2a CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+TO_Skewness CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+C_MeanF True Airspeed (knots),0.0004032258064516125,0.0009598694124385543
+D_SF CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+TO_c Vertical Speed (ft/min),0.0004032258064516125,0.0009598694124385543
+D_Kurtosis OIL TEMPERATURE (deg C),0.0004032258064516125,0.0009598694124385543
+TO_MeanF ALT CONTACT (V),0.0004032258064516125,0.0009598694124385543
+TO_a FUEL CONTACT (V),0.0004032258064516125,0.0009598694124385543
+TO_-b/2a FUEL CONTACT (V),0.0004032258064516125,0.0009598694124385543
+C_CoV EGT 3 (deg C),0.0004032258064516125,0.0009598694124385543
+TO_MedF CHT 1 (deg C),0.0004032258064516125,0.0009598694124385543
+L_-b/2a Fuel Level R (gal),0.0004032258064516125,0.0009598694124385543
+D_a Fuel Level L (gal),0.0004032258064516125,0.0009598694124385543
+TO_Mean RPM L,0.0004032258064516125,0.0009598694124385543
+D_MeanF EGT 2 (deg C),0.0004032258064516125,0.0009598694124385543
+D_RMS Fuel Flow 1 (gal/hr),0.0004032258064516125,0.0009598694124385543
+TO_SF ALT CONTACT (V),0.0004032258064516125,0.0009598694124385543
+L_Kurtosis EGT 3 (deg C),0.0004032258064516125,0.0009598694124385543
+L_Kurtosis CHT 2 (deg C),0.0004032258064516125,0.0009598694124385543
+D_Skewness CHT 6 (deg C),0.0004032258064516125,0.0009598694124385543
+D_MeanF Fuel Pressure (PSI),0.0004032258064516125,0.001282176345990517
+TO_Mean CANOPY CONTACT (V),0.0004032258064516125,0.0009598694124385543
+C_a Oil Pressure (PSI),0.00026881720430107505,0.000806451612903225
+C_MedF Fuel Flow 1 (gal/hr),0.00026881720430107505,0.0008064516129032252
+TO_-b/2a EGT Leaning State,0.00026881720430107505,0.000806451612903225
+TO_a Pitch (deg),0.00026881720430107505,0.000806451612903225
+L_Kurtosis EGT 6 (deg C),0.00026881720430107505,0.0008064516129032252
+L_c EGT 1 (deg C),0.00026881720430107505,0.000806451612903225
+TO_MedF ALT CONTACT (V),0.00026881720430107505,0.0008064516129032252
+D_SF Oil Pressure (PSI),0.00026881720430107505,0.000806451612903225
+TO_-b/2a Volts 1,0.00026881720430107505,0.000806451612903225
+TO_MeanF OIL TEMPERATURE (deg C),0.00026881720430107505,0.0008064516129032252
+D_SF Fuel Level R (gal),0.00026881720430107505,0.000806451612903225
+C_a CABIN TEMPERATURE (deg C),0.00026881720430107505,0.000806451612903225
+D_-b/2a Volts 1,0.00026881720430107505,0.0008064516129032252
+TO_Kurtosis OAT (deg C),0.00026881720430107505,0.000806451612903225
+L_Skewness Volts 1,0.00026881720430107505,0.000806451612903225
+D_SF Fuel Flow 1 (gal/hr),0.00026881720430107505,0.000806451612903225
+TO_Kurtosis EGT 1 (deg C),0.00026881720430107505,0.000806451612903225
+C_CoV Pitch (deg),0.00026881720430107505,0.000806451612903225
+D_-b/2a EGT 3 (deg C),0.00026881720430107505,0.000806451612903225
+D_CoV Amps,0.00026881720430107505,0.0008064516129032252
+D_MedF EGT 6 (deg C),0.00026881720430107505,0.000806451612903225
+C_Mean EGT 2 (deg C),0.00026881720430107505,0.000806451612903225
+D_c Pitch (deg),0.00026881720430107505,0.000806451612903225
+C_c EGT 4 (deg C),0.00026881720430107505,0.000806451612903225
+TO_MedF CANOPY CONTACT (V),0.00026881720430107505,0.000806451612903225
+TO_Mean CHT 2 (deg C),0.00026881720430107505,0.000806451612903225
+TO_Skewness EGT 4 (deg C),0.00026881720430107505,0.0008064516129032252
+TO_c EGT 3 (deg C),0.00026881720430107505,0.000806451612903225
+L_CoV CABIN TEMPERATURE (deg C),0.00026881720430107505,0.000806451612903225
+D_a OIL TEMPERATURE (deg C),0.00026881720430107505,0.000806451612903225
+D_MedF Fuel Pressure (PSI),0.00026881720430107505,0.000806451612903225
+D_Skewness EGT Leaning State,0.00013440860215053753,0.0005858735139167566
+C_SF Percent Power,0.00013440860215053753,0.0005858735139167566
+L_CoV Manifold Pressure (inHg),0.00013440860215053753,0.0005858735139167566
+C_a Fuel Level L (gal),0.00013440860215053753,0.0005858735139167566
+TO_SF EGT 6 (deg C),0.00013440860215053753,0.0005858735139167566
+C_Skewness Pitch (deg),0.00013440860215053753,0.0005858735139167566
+D_Skewness EGT 4 (deg C),0.00013440860215053753,0.0005858735139167566
+L_Mean CHT 2 (deg C),0.00013440860215053753,0.0005858735139167566
+TO_SF EGT 4 (deg C),0.00013440860215053753,0.0005858735139167566
+TO_MeanF EGT Leaning State,0.00013440860215053753,0.0005858735139167566
+C_Kurtosis Fuel Level R (gal),0.00013440860215053753,0.0005858735139167566
+L_MeanF ALT CONTACT (V),0.00013440860215053753,0.0005858735139167566
+D_Skewness Pitch (deg),0.00013440860215053753,0.0005858735139167566
+TO_c EGT Leaning State,0.00013440860215053753,0.0005858735139167566
+C_Skewness OIL TEMPERATURE (deg C),0.00013440860215053753,0.0005858735139167566
+C_-b/2a Manifold Pressure (inHg),0.00013440860215053753,0.0005858735139167566
+D_Kurtosis EGT 1 (deg C),0.00013440860215053753,0.0005858735139167566
+C_Mean OIL TEMPERATURE (deg C),0.00013440860215053753,0.0005858735139167566
+TO_RMS CHT 6 (deg C),0.00013440860215053753,0.0005858735139167566
+C_Mean Amps,0.00013440860215053753,0.0005858735139167566
+TO_c EGT 4 (deg C),0.00013440860215053753,0.0005858735139167566
+C_Mean CHT 5 (deg C),0.00013440860215053753,0.0005858735139167566
+L_-b/2a CHT 5 (deg C),0.00013440860215053753,0.0005858735139167566
+TO_Mean CHT 1 (deg C),0.00013440860215053753,0.0005858735139167566
+TO_Skewness CHT 6 (deg C),0.00013440860215053753,0.0005858735139167566
+C_CoV Amps,0.00013440860215053753,0.0005858735139167566
+TO_c EGT 2 (deg C),0.00013440860215053753,0.0005858735139167566
+TO_CoV EGT Leaning State,0.00013440860215053753,0.0005858735139167566
+C_MeanF Percent Power,0.00013440860215053753,0.0005858735139167566
+D_CoV EGT Leaning State,0.00013440860215053753,0.0005858735139167566
+TO_c RPM L,0.00013440860215053753,0.0005858735139167566
+TO_c Oil Pressure (PSI),0.00013440860215053753,0.0005858735139167566
+L_SF Fuel Remaining (gal),0.00013440860215053753,0.0005858735139167566
+D_-b/2a CABIN TEMPERATURE (deg C),0.00013440860215053753,0.0005858735139167566
+D_MeanF Manifold Pressure (inHg),0.00013440860215053753,0.0005858735139167566
+TO_MeanF Vertical Speed (ft/min),0.00013440860215053753,0.0005858735139167566
+L_MedF Fuel Level R (gal),0.00013440860215053753,0.0005858735139167566
+L_-b/2a Pressure Altitude (ft),0.00013440860215053753,0.0005858735139167566
+D_MeanF Vertical Speed (ft/min),0.00013440860215053753,0.0005858735139167566
+D_SF Fuel Level L (gal),0.00013440860215053753,0.0005858735139167566
+L_SF RPM L,0.0,0.0
+L_SF CHT 6 (deg C),0.0,0.0
+L_SF Fuel Flow 1 (gal/hr),0.0,0.0
+L_MeanF CHT 5 (deg C),0.0,0.0
+L_MeanF Fuel Remaining (gal),0.0,0.0
+L_MeanF Volts 1,0.0,0.0
+L_MeanF Amps,0.0,0.0
+L_SF Amps,0.0,0.0
+L_SF Volts 1,0.0,0.0
+L_SF Fuel Level L (gal),0.0,0.0
+L_MeanF EGT 6 (deg C),0.0,0.0
+L_SF Fuel Level R (gal),0.0,0.0
+L_MeanF CHT 6 (deg C),0.0,0.0
+L_SF EGT 6 (deg C),0.0,0.0
+L_SF Fuel Pressure (PSI),0.0,0.0
+L_SF EGT 4 (deg C),0.0,0.0
+L_SF EGT 5 (deg C),0.0,0.0
+L_SF FUEL CONTACT (V),0.0,0.0
+TO_-b/2a Pressure Altitude (ft),0.0,0.0
+TO_a Pressure Altitude (ft),0.0,0.0
+TO_c Pitch (deg),0.0,0.0
+TO_-b/2a Pitch (deg),0.0,0.0
+L_SF EGT Leaning State,0.0,0.0
+L_MeanF Oil Pressure (PSI),0.0,0.0
+L_MeanF RPM L,0.0,0.0
+L_SF Percent Power,0.0,0.0
+L_SF OIL TEMPERATURE (deg C),0.0,0.0
+L_SF CANOPY CONTACT (V),0.0,0.0
+L_MeanF Fuel Flow 1 (gal/hr),0.0,0.0
+L_SF CHT 4 (deg C),0.0,0.0
+L_SF CABIN TEMPERATURE (deg C),0.0,0.0
+L_SF EGT 1 (deg C),0.0,0.0
+L_SF CHT 1 (deg C),0.0,0.0
+L_SF EGT 2 (deg C),0.0,0.0
+L_MeanF Fuel Pressure (PSI),0.0,0.0
+L_MeanF Fuel Level L (gal),0.0,0.0
+L_SF CHT 2 (deg C),0.0,0.0
+L_SF CHT 3 (deg C),0.0,0.0
+L_SF Barometer Setting (inHg),0.0,0.0
+L_MeanF Fuel Level R (gal),0.0,0.0
+L_SF Oil Pressure (PSI),0.0,0.0
+L_MedF OAT (deg C),0.0,0.0
+L_SF True Airspeed (knots),0.0,0.0
+L_MeanF EGT Leaning State,0.0,0.0
+L_MedF CHT 5 (deg C),0.0,0.0
+L_MedF EGT 6 (deg C),0.0,0.0
+L_MedF CHT 6 (deg C),0.0,0.0
+L_MeanF FUEL CONTACT (V),0.0,0.0
+L_MeanF CANOPY CONTACT (V),0.0,0.0
+L_MeanF OIL TEMPERATURE (deg C),0.0,0.0
+L_MeanF Percent Power,0.0,0.0
+L_MedF Amps,0.0,0.0
+L_MedF Volts 1,0.0,0.0
+L_MedF Fuel Remaining (gal),0.0,0.0
+L_MedF Fuel Level L (gal),0.0,0.0
+L_MedF CHT 4 (deg C),0.0,0.0
+L_MedF Fuel Pressure (PSI),0.0,0.0
+L_MedF Pitch (deg),0.0,0.0
+L_MedF Fuel Flow 1 (gal/hr),0.0,0.0
+L_MedF Pressure Altitude (ft),0.0,0.0
+L_MedF Manifold Pressure (inHg),0.0,0.0
+L_MedF RPM L,0.0,0.0
+L_MedF Oil Pressure (PSI),0.0,0.0
+L_MedF Barometer Setting (inHg),0.0,0.0
+L_MedF Angle of Attack (%),0.0,0.0
+L_MedF Vertical Speed (ft/min),0.0,0.0
+L_MedF EGT 5 (deg C),0.0,0.0
+L_MedF EGT 4 (deg C),0.0,0.0
+L_SF OAT (deg C),0.0,0.0
+L_MeanF EGT 2 (deg C),0.0,0.0
+L_SF Vertical Speed (ft/min),0.0,0.0
+L_SF Angle of Attack (%),0.0,0.0
+L_MeanF EGT 5 (deg C),0.0,0.0
+L_MedF True Airspeed (knots),0.0,0.0
+L_MeanF CHT 4 (deg C),0.0,0.0
+L_MeanF EGT 4 (deg C),0.0,0.0
+L_MeanF CHT 3 (deg C),0.0,0.0
+L_MeanF EGT 3 (deg C),0.0,0.0
+L_MedF EGT Leaning State,0.0,0.0
+L_MeanF CHT 2 (deg C),0.0,0.0
+L_MedF OIL TEMPERATURE (deg C),0.0,0.0
+L_MedF CHT 3 (deg C),0.0,0.0
+L_MeanF CHT 1 (deg C),0.0,0.0
+L_MedF CANOPY CONTACT (V),0.0,0.0
+L_MedF FUEL CONTACT (V),0.0,0.0
+L_MedF CABIN TEMPERATURE (deg C),0.0,0.0
+L_MeanF EGT 1 (deg C),0.0,0.0
+L_MedF ALT CONTACT (V),0.0,0.0
+L_MedF EGT 1 (deg C),0.0,0.0
+L_MedF CHT 1 (deg C),0.0,0.0
+L_MedF EGT 2 (deg C),0.0,0.0
+L_MedF CHT 2 (deg C),0.0,0.0
+L_MedF EGT 3 (deg C),0.0,0.0
+TO_Kurtosis Pitch (deg),0.0,0.0
+L_MeanF Barometer Setting (inHg),0.0,0.0
+L_Skewness EGT 4 (deg C),0.0,0.0
+L_Skewness EGT 5 (deg C),0.0,0.0
+L_Skewness CHT 5 (deg C),0.0,0.0
+L_Skewness EGT 6 (deg C),0.0,0.0
+L_Skewness Amps,0.0,0.0
+L_Skewness Fuel Remaining (gal),0.0,0.0
+L_Skewness Fuel Level R (gal),0.0,0.0
+L_Skewness Fuel Level L (gal),0.0,0.0
+L_Skewness Fuel Pressure (PSI),0.0,0.0
+L_Skewness Fuel Flow 1 (gal/hr),0.0,0.0
+L_Skewness Manifold Pressure (inHg),0.0,0.0
+L_Skewness RPM L,0.0,0.0
+L_Skewness Oil Pressure (PSI),0.0,0.0
+L_Skewness Barometer Setting (inHg),0.0,0.0
+L_Skewness True Airspeed (knots),0.0,0.0
+L_Skewness OAT (deg C),0.0,0.0
+L_Skewness Vertical Speed (ft/min),0.0,0.0
+L_Skewness Angle of Attack (%),0.0,0.0
+L_Skewness CHT 4 (deg C),0.0,0.0
+L_Skewness EGT 3 (deg C),0.0,0.0
+L_RMS Fuel Flow 1 (gal/hr),0.0,0.0
+L_Skewness CHT 2 (deg C),0.0,0.0
+L_RMS RPM L,0.0,0.0
+L_RMS Oil Pressure (PSI),0.0,0.0
+L_RMS Barometer Setting (inHg),0.0,0.0
+L_RMS True Airspeed (knots),0.0,0.0
+L_RMS OAT (deg C),0.0,0.0
+L_RMS Vertical Speed (ft/min),0.0,0.0
+L_RMS Pressure Altitude (ft),0.0,0.0
+L_RMS Pitch (deg),0.0,0.0
+L_Skewness EGT Leaning State,0.0,0.0
+L_Skewness OIL TEMPERATURE (deg C),0.0,0.0
+L_Skewness CANOPY CONTACT (V),0.0,0.0
+L_Skewness FUEL CONTACT (V),0.0,0.0
+L_Skewness CABIN TEMPERATURE (deg C),0.0,0.0
+L_Skewness ALT CONTACT (V),0.0,0.0
+L_Skewness EGT 1 (deg C),0.0,0.0
+L_Skewness CHT 1 (deg C),0.0,0.0
+L_Skewness EGT 2 (deg C),0.0,0.0
+L_Skewness Pressure Altitude (ft),0.0,0.0
+L_Skewness Pitch (deg),0.0,0.0
+L_Kurtosis Percent Power,0.0,0.0
+L_Kurtosis OIL TEMPERATURE (deg C),0.0,0.0
+L_Kurtosis Vertical Speed (ft/min),0.0,0.0
+L_Kurtosis Angle of Attack (%),0.0,0.0
+L_Kurtosis Pressure Altitude (ft),0.0,0.0
+D_SF EGT Leaning State,0.0,0.0
+D_SF Percent Power,0.0,0.0
+D_SF OIL TEMPERATURE (deg C),0.0,0.0
+D_SF CANOPY CONTACT (V),0.0,0.0
+D_SF FUEL CONTACT (V),0.0,0.0
+D_SF CABIN TEMPERATURE (deg C),0.0,0.0
+D_SF ALT CONTACT (V),0.0,0.0
+D_SF EGT 1 (deg C),0.0,0.0
+D_SF EGT 2 (deg C),0.0,0.0
+D_SF CHT 2 (deg C),0.0,0.0
+D_SF EGT 3 (deg C),0.0,0.0
+D_SF CHT 3 (deg C),0.0,0.0
+D_SF EGT 4 (deg C),0.0,0.0
+D_SF CHT 4 (deg C),0.0,0.0
+L_Kurtosis OAT (deg C),0.0,0.0
+L_Kurtosis True Airspeed (knots),0.0,0.0
+L_Kurtosis Barometer Setting (inHg),0.0,0.0
+L_Kurtosis CHT 6 (deg C),0.0,0.0
+L_Kurtosis CANOPY CONTACT (V),0.0,0.0
+L_Kurtosis FUEL CONTACT (V),0.0,0.0
+L_Kurtosis ALT CONTACT (V),0.0,0.0
+L_Kurtosis CHT 3 (deg C),0.0,0.0
+L_Kurtosis EGT 4 (deg C),0.0,0.0
+L_Kurtosis CHT 4 (deg C),0.0,0.0
+L_Kurtosis EGT 5 (deg C),0.0,0.0
+L_Kurtosis Amps,0.0,0.0
+L_Kurtosis Oil Pressure (PSI),0.0,0.0
+L_Kurtosis Volts 1,0.0,0.0
+L_Kurtosis Fuel Remaining (gal),0.0,0.0
+L_Kurtosis Fuel Level R (gal),0.0,0.0
+L_Kurtosis Fuel Level L (gal),0.0,0.0
+L_Kurtosis Fuel Pressure (PSI),0.0,0.0
+L_Kurtosis Fuel Flow 1 (gal/hr),0.0,0.0
+L_Kurtosis Manifold Pressure (inHg),0.0,0.0
+L_RMS Manifold Pressure (inHg),0.0,0.0
+L_RMS Fuel Pressure (PSI),0.0,0.0
+L_MeanF True Airspeed (knots),0.0,0.0
+L_CoV CHT 6 (deg C),0.0,0.0
+L_CoV Volts 1,0.0,0.0
+L_CoV Fuel Level R (gal),0.0,0.0
+L_CoV Fuel Level L (gal),0.0,0.0
+L_CoV Fuel Pressure (PSI),0.0,0.0
+L_CoV RPM L,0.0,0.0
+L_CoV Oil Pressure (PSI),0.0,0.0
+L_CoV Barometer Setting (inHg),0.0,0.0
+L_CoV True Airspeed (knots),0.0,0.0
+L_CoV OAT (deg C),0.0,0.0
+L_CoV Vertical Speed (ft/min),0.0,0.0
+L_CoV Pressure Altitude (ft),0.0,0.0
+L_CoV Pitch (deg),0.0,0.0
+L_Mean EGT Leaning State,0.0,0.0
+L_Mean Percent Power,0.0,0.0
+L_Mean OIL TEMPERATURE (deg C),0.0,0.0
+L_Mean CANOPY CONTACT (V),0.0,0.0
+L_Mean FUEL CONTACT (V),0.0,0.0
+L_CoV Amps,0.0,0.0
+L_CoV CHT 5 (deg C),0.0,0.0
+L_RMS Fuel Level L (gal),0.0,0.0
+L_CoV EGT 5 (deg C),0.0,0.0
+L_MeanF OAT (deg C),0.0,0.0
+L_MeanF Vertical Speed (ft/min),0.0,0.0
+L_MeanF Angle of Attack (%),0.0,0.0
+L_MeanF Pressure Altitude (ft),0.0,0.0
+L_MeanF Pitch (deg),0.0,0.0
+L_CoV EGT Leaning State,0.0,0.0
+L_CoV Percent Power,0.0,0.0
+L_CoV OIL TEMPERATURE (deg C),0.0,0.0
+L_CoV CANOPY CONTACT (V),0.0,0.0
+L_CoV ALT CONTACT (V),0.0,0.0
+L_CoV EGT 1 (deg C),0.0,0.0
+L_CoV CHT 1 (deg C),0.0,0.0
+L_CoV EGT 2 (deg C),0.0,0.0
+L_CoV CHT 2 (deg C),0.0,0.0
+L_CoV CHT 3 (deg C),0.0,0.0
+L_CoV EGT 4 (deg C),0.0,0.0
+L_CoV CHT 4 (deg C),0.0,0.0
+L_Mean ALT CONTACT (V),0.0,0.0
+TO_a Angle of Attack (%),0.0,0.0
+L_Mean EGT 2 (deg C),0.0,0.0
+L_Mean CHT 3 (deg C),0.0,0.0
+L_RMS CABIN TEMPERATURE (deg C),0.0,0.0
+L_RMS ALT CONTACT (V),0.0,0.0
+L_RMS EGT 1 (deg C),0.0,0.0
+L_RMS CHT 1 (deg C),0.0,0.0
+L_RMS EGT 2 (deg C),0.0,0.0
+L_RMS CHT 2 (deg C),0.0,0.0
+L_RMS EGT 3 (deg C),0.0,0.0
+L_RMS CHT 3 (deg C),0.0,0.0
+L_RMS EGT 4 (deg C),0.0,0.0
+L_RMS CHT 4 (deg C),0.0,0.0
+L_RMS EGT 5 (deg C),0.0,0.0
+L_RMS CHT 5 (deg C),0.0,0.0
+L_RMS EGT 6 (deg C),0.0,0.0
+L_RMS Amps,0.0,0.0
+L_RMS Volts 1,0.0,0.0
+L_RMS Fuel Remaining (gal),0.0,0.0
+L_RMS Fuel Level R (gal),0.0,0.0
+L_RMS FUEL CONTACT (V),0.0,0.0
+L_RMS CANOPY CONTACT (V),0.0,0.0
+L_RMS OIL TEMPERATURE (deg C),0.0,0.0
+L_Mean Fuel Level R (gal),0.0,0.0
+L_Mean EGT 4 (deg C),0.0,0.0
+L_Mean EGT 5 (deg C),0.0,0.0
+L_Mean EGT 6 (deg C),0.0,0.0
+L_Mean CHT 6 (deg C),0.0,0.0
+L_Mean Amps,0.0,0.0
+L_Mean Volts 1,0.0,0.0
+L_Mean Fuel Remaining (gal),0.0,0.0
+L_Mean Fuel Level L (gal),0.0,0.0
+L_RMS Percent Power,0.0,0.0
+L_Mean Manifold Pressure (inHg),0.0,0.0
+L_Mean RPM L,0.0,0.0
+L_Mean Barometer Setting (inHg),0.0,0.0
+L_Mean True Airspeed (knots),0.0,0.0
+L_Mean Vertical Speed (ft/min),0.0,0.0
+L_Mean Pressure Altitude (ft),0.0,0.0
+L_RMS EGT Leaning State,0.0,0.0
+TO_c Pressure Altitude (ft),0.0,0.0
+TO_c CHT 5 (deg C),0.0,0.0
+TO_-b/2a Angle of Attack (%),0.0,0.0
+D_a EGT 2 (deg C),0.0,0.0
+D_-b/2a CHT 2 (deg C),0.0,0.0
+D_a CHT 2 (deg C),0.0,0.0
+D_c EGT 3 (deg C),0.0,0.0
+D_a EGT 3 (deg C),0.0,0.0
+D_c CHT 3 (deg C),0.0,0.0
+D_-b/2a CHT 3 (deg C),0.0,0.0
+D_a CHT 3 (deg C),0.0,0.0
+D_c EGT 4 (deg C),0.0,0.0
+D_-b/2a EGT 4 (deg C),0.0,0.0
+D_a EGT 4 (deg C),0.0,0.0
+D_c CHT 4 (deg C),0.0,0.0
+D_-b/2a CHT 4 (deg C),0.0,0.0
+D_a CHT 4 (deg C),0.0,0.0
+D_c EGT 5 (deg C),0.0,0.0
+D_-b/2a EGT 5 (deg C),0.0,0.0
+D_a EGT 5 (deg C),0.0,0.0
+D_c CHT 5 (deg C),0.0,0.0
+D_-b/2a CHT 5 (deg C),0.0,0.0
+D_a CHT 5 (deg C),0.0,0.0
+D_c CHT 2 (deg C),0.0,0.0
+D_-b/2a EGT 2 (deg C),0.0,0.0
+TO_c Angle of Attack (%),0.0,0.0
+D_c EGT 2 (deg C),0.0,0.0
+D_-b/2a Percent Power,0.0,0.0
+D_a Percent Power,0.0,0.0
+D_c OIL TEMPERATURE (deg C),0.0,0.0
+D_-b/2a OIL TEMPERATURE (deg C),0.0,0.0
+D_c CANOPY CONTACT (V),0.0,0.0
+D_-b/2a CANOPY CONTACT (V),0.0,0.0
+D_a CANOPY CONTACT (V),0.0,0.0
+D_c FUEL CONTACT (V),0.0,0.0
+D_-b/2a FUEL CONTACT (V),0.0,0.0
+D_a FUEL CONTACT (V),0.0,0.0
+D_c CABIN TEMPERATURE (deg C),0.0,0.0
+D_a CABIN TEMPERATURE (deg C),0.0,0.0
+D_c ALT CONTACT (V),0.0,0.0
+D_-b/2a ALT CONTACT (V),0.0,0.0
+D_c EGT 1 (deg C),0.0,0.0
+D_-b/2a EGT 1 (deg C),0.0,0.0
+D_a EGT 1 (deg C),0.0,0.0
+D_c CHT 1 (deg C),0.0,0.0
+D_a CHT 1 (deg C),0.0,0.0
+D_c EGT 6 (deg C),0.0,0.0
+D_-b/2a EGT 6 (deg C),0.0,0.0
+D_a EGT 6 (deg C),0.0,0.0
+D_c CHT 6 (deg C),0.0,0.0
+D_a RPM L,0.0,0.0
+D_c Oil Pressure (PSI),0.0,0.0
+D_a Oil Pressure (PSI),0.0,0.0
+D_c Barometer Setting (inHg),0.0,0.0
+D_a Barometer Setting (inHg),0.0,0.0
+D_c True Airspeed (knots),0.0,0.0
+D_-b/2a True Airspeed (knots),0.0,0.0
+D_a True Airspeed (knots),0.0,0.0
+D_c OAT (deg C),0.0,0.0
+D_-b/2a OAT (deg C),0.0,0.0
+D_a OAT (deg C),0.0,0.0
+D_c Vertical Speed (ft/min),0.0,0.0
+D_-b/2a Vertical Speed (ft/min),0.0,0.0
+D_a Vertical Speed (ft/min),0.0,0.0
+D_-b/2a Angle of Attack (%),0.0,0.0
+D_a Angle of Attack (%),0.0,0.0
+D_c Pressure Altitude (ft),0.0,0.0
+D_-b/2a Pressure Altitude (ft),0.0,0.0
+D_a Pressure Altitude (ft),0.0,0.0
+D_-b/2a RPM L,0.0,0.0
+D_a Manifold Pressure (inHg),0.0,0.0
+D_-b/2a Manifold Pressure (inHg),0.0,0.0
+D_c Fuel Level R (gal),0.0,0.0
+D_-b/2a CHT 6 (deg C),0.0,0.0
+D_a CHT 6 (deg C),0.0,0.0
+D_c Amps,0.0,0.0
+D_-b/2a Amps,0.0,0.0
+D_a Amps,0.0,0.0
+D_c Volts 1,0.0,0.0
+D_-b/2a Fuel Remaining (gal),0.0,0.0
+D_a Fuel Remaining (gal),0.0,0.0
+D_-b/2a Fuel Level R (gal),0.0,0.0
+D_c Manifold Pressure (inHg),0.0,0.0
+D_a Fuel Level R (gal),0.0,0.0
+D_c Fuel Level L (gal),0.0,0.0
+D_-b/2a Fuel Level L (gal),0.0,0.0
+D_c Fuel Pressure (PSI),0.0,0.0
+D_-b/2a Fuel Pressure (PSI),0.0,0.0
+D_a Fuel Pressure (PSI),0.0,0.0
+D_c Fuel Flow 1 (gal/hr),0.0,0.0
+D_-b/2a Fuel Flow 1 (gal/hr),0.0,0.0
+D_c Percent Power,0.0,0.0
+D_a EGT Leaning State,0.0,0.0
+D_-b/2a EGT Leaning State,0.0,0.0
+L_c Amps,0.0,0.0
+L_a EGT 2 (deg C),0.0,0.0
+L_c CHT 2 (deg C),0.0,0.0
+L_-b/2a CHT 2 (deg C),0.0,0.0
+L_a CHT 2 (deg C),0.0,0.0
+L_a EGT 3 (deg C),0.0,0.0
+L_a CHT 3 (deg C),0.0,0.0
+L_c EGT 4 (deg C),0.0,0.0
+L_-b/2a EGT 4 (deg C),0.0,0.0
+L_a EGT 4 (deg C),0.0,0.0
+L_c CHT 4 (deg C),0.0,0.0
+L_a CHT 4 (deg C),0.0,0.0
+L_-b/2a EGT 5 (deg C),0.0,0.0
+L_a EGT 5 (deg C),0.0,0.0
+L_c CHT 5 (deg C),0.0,0.0
+L_a CHT 5 (deg C),0.0,0.0
+L_c EGT 6 (deg C),0.0,0.0
+L_-b/2a EGT 6 (deg C),0.0,0.0
+L_a EGT 6 (deg C),0.0,0.0
+L_c CHT 6 (deg C),0.0,0.0
+L_-b/2a EGT 2 (deg C),0.0,0.0
+L_c EGT 2 (deg C),0.0,0.0
+L_a CHT 1 (deg C),0.0,0.0
+L_-b/2a CANOPY CONTACT (V),0.0,0.0
+L_-b/2a EGT Leaning State,0.0,0.0
+L_a EGT Leaning State,0.0,0.0
+L_c Percent Power,0.0,0.0
+L_-b/2a Percent Power,0.0,0.0
+L_a Percent Power,0.0,0.0
+L_c OIL TEMPERATURE (deg C),0.0,0.0
+L_-b/2a OIL TEMPERATURE (deg C),0.0,0.0
+L_c CANOPY CONTACT (V),0.0,0.0
+L_-b/2a FUEL CONTACT (V),0.0,0.0
+L_a EGT 1 (deg C),0.0,0.0
+L_a FUEL CONTACT (V),0.0,0.0
+L_c CABIN TEMPERATURE (deg C),0.0,0.0
+L_-b/2a CABIN TEMPERATURE (deg C),0.0,0.0
+L_a CABIN TEMPERATURE (deg C),0.0,0.0
+L_c ALT CONTACT (V),0.0,0.0
+L_-b/2a ALT CONTACT (V),0.0,0.0
+L_a ALT CONTACT (V),0.0,0.0
+L_-b/2a EGT 1 (deg C),0.0,0.0
+L_a CHT 6 (deg C),0.0,0.0
+L_-b/2a Amps,0.0,0.0
+D_c EGT Leaning State,0.0,0.0
+L_a Amps,0.0,0.0
+L_c Oil Pressure (PSI),0.0,0.0
+L_-b/2a Oil Pressure (PSI),0.0,0.0
+L_a Oil Pressure (PSI),0.0,0.0
+L_c Barometer Setting (inHg),0.0,0.0
+L_a Barometer Setting (inHg),0.0,0.0
+L_c True Airspeed (knots),0.0,0.0
+L_c OAT (deg C),0.0,0.0
+L_-b/2a OAT (deg C),0.0,0.0
+L_a OAT (deg C),0.0,0.0
+L_c Vertical Speed (ft/min),0.0,0.0
+L_-b/2a Vertical Speed (ft/min),0.0,0.0
+L_a Vertical Speed (ft/min),0.0,0.0
+L_c Angle of Attack (%),0.0,0.0
+L_-b/2a Angle of Attack (%),0.0,0.0
+L_a Angle of Attack (%),0.0,0.0
+L_a Pressure Altitude (ft),0.0,0.0
+L_c Pitch (deg),0.0,0.0
+L_-b/2a Pitch (deg),0.0,0.0
+L_a Pitch (deg),0.0,0.0
+L_a RPM L,0.0,0.0
+L_-b/2a RPM L,0.0,0.0
+L_c RPM L,0.0,0.0
+L_c Fuel Level L (gal),0.0,0.0
+L_c Volts 1,0.0,0.0
+L_-b/2a Volts 1,0.0,0.0
+L_a Volts 1,0.0,0.0
+L_c Fuel Remaining (gal),0.0,0.0
+L_-b/2a Fuel Remaining (gal),0.0,0.0
+L_a Fuel Remaining (gal),0.0,0.0
+L_c Fuel Level R (gal),0.0,0.0
+L_a Fuel Level R (gal),0.0,0.0
+L_-b/2a Fuel Level L (gal),0.0,0.0
+L_a Manifold Pressure (inHg),0.0,0.0
+L_a Fuel Level L (gal),0.0,0.0
+L_c Fuel Pressure (PSI),0.0,0.0
+L_-b/2a Fuel Pressure (PSI),0.0,0.0
+L_a Fuel Pressure (PSI),0.0,0.0
+L_c Fuel Flow 1 (gal/hr),0.0,0.0
+L_-b/2a Fuel Flow 1 (gal/hr),0.0,0.0
+L_c Manifold Pressure (inHg),0.0,0.0
+L_-b/2a Manifold Pressure (inHg),0.0,0.0
+D_-b/2a Pitch (deg),0.0,0.0
+D_a Pitch (deg),0.0,0.0
+C_c EGT Leaning State,0.0,0.0
+TO_a EGT 5 (deg C),0.0,0.0
+TO_c CHT 1 (deg C),0.0,0.0
+TO_-b/2a CHT 1 (deg C),0.0,0.0
+TO_a CHT 1 (deg C),0.0,0.0
+TO_-b/2a EGT 2 (deg C),0.0,0.0
+TO_a EGT 2 (deg C),0.0,0.0
+TO_c CHT 2 (deg C),0.0,0.0
+TO_-b/2a CHT 2 (deg C),0.0,0.0
+TO_a CHT 2 (deg C),0.0,0.0
+TO_-b/2a EGT 3 (deg C),0.0,0.0
+TO_a EGT 3 (deg C),0.0,0.0
+TO_c CHT 3 (deg C),0.0,0.0
+TO_-b/2a CHT 3 (deg C),0.0,0.0
+TO_a CHT 3 (deg C),0.0,0.0
+TO_-b/2a EGT 4 (deg C),0.0,0.0
+TO_a EGT 4 (deg C),0.0,0.0
+TO_c CHT 4 (deg C),0.0,0.0
+TO_-b/2a CHT 4 (deg C),0.0,0.0
+TO_a CHT 4 (deg C),0.0,0.0
+TO_c EGT 5 (deg C),0.0,0.0
+TO_a EGT 1 (deg C),0.0,0.0
+TO_-b/2a EGT 1 (deg C),0.0,0.0
+TO_c EGT 1 (deg C),0.0,0.0
+TO_-b/2a OIL TEMPERATURE (deg C),0.0,0.0
+C_c Pitch (deg),0.0,0.0
+C_-b/2a Pitch (deg),0.0,0.0
+C_a Pitch (deg),0.0,0.0
+TO_a EGT Leaning State,0.0,0.0
+TO_c Percent Power,0.0,0.0
+TO_-b/2a Percent Power,0.0,0.0
+TO_a Percent Power,0.0,0.0
+TO_c OIL TEMPERATURE (deg C),0.0,0.0
+TO_a OIL TEMPERATURE (deg C),0.0,0.0
+TO_a ALT CONTACT (V),0.0,0.0
+TO_c CANOPY CONTACT (V),0.0,0.0
+TO_-b/2a CANOPY CONTACT (V),0.0,0.0
+TO_a CANOPY CONTACT (V),0.0,0.0
+TO_c FUEL CONTACT (V),0.0,0.0
+TO_c CABIN TEMPERATURE (deg C),0.0,0.0
+TO_a CABIN TEMPERATURE (deg C),0.0,0.0
+TO_c ALT CONTACT (V),0.0,0.0
+TO_-b/2a ALT CONTACT (V),0.0,0.0
+TO_-b/2a EGT 5 (deg C),0.0,0.0
+D_SF CHT 5 (deg C),0.0,0.0
+C_-b/2a Pressure Altitude (ft),0.0,0.0
+TO_-b/2a CHT 5 (deg C),0.0,0.0
+TO_a Fuel Pressure (PSI),0.0,0.0
+TO_c Fuel Flow 1 (gal/hr),0.0,0.0
+TO_-b/2a Fuel Flow 1 (gal/hr),0.0,0.0
+TO_a Fuel Flow 1 (gal/hr),0.0,0.0
+TO_c Manifold Pressure (inHg),0.0,0.0
+TO_-b/2a Manifold Pressure (inHg),0.0,0.0
+TO_a Manifold Pressure (inHg),0.0,0.0
+TO_a RPM L,0.0,0.0
+TO_-b/2a Oil Pressure (PSI),0.0,0.0
+TO_a Oil Pressure (PSI),0.0,0.0
+TO_c Barometer Setting (inHg),0.0,0.0
+TO_a Barometer Setting (inHg),0.0,0.0
+TO_c True Airspeed (knots),0.0,0.0
+TO_-b/2a True Airspeed (knots),0.0,0.0
+TO_a True Airspeed (knots),0.0,0.0
+TO_c OAT (deg C),0.0,0.0
+TO_-b/2a OAT (deg C),0.0,0.0
+TO_-b/2a Vertical Speed (ft/min),0.0,0.0
+TO_a Vertical Speed (ft/min),0.0,0.0
+TO_-b/2a Fuel Pressure (PSI),0.0,0.0
+TO_c Fuel Pressure (PSI),0.0,0.0
+TO_a Fuel Level L (gal),0.0,0.0
+TO_-b/2a Amps,0.0,0.0
+TO_a CHT 5 (deg C),0.0,0.0
+TO_c EGT 6 (deg C),0.0,0.0
+TO_-b/2a EGT 6 (deg C),0.0,0.0
+TO_a EGT 6 (deg C),0.0,0.0
+TO_c CHT 6 (deg C),0.0,0.0
+TO_-b/2a CHT 6 (deg C),0.0,0.0
+TO_a CHT 6 (deg C),0.0,0.0
+TO_c Amps,0.0,0.0
+TO_a Amps,0.0,0.0
+TO_-b/2a Fuel Level L (gal),0.0,0.0
+TO_c Volts 1,0.0,0.0
+TO_a Volts 1,0.0,0.0
+TO_c Fuel Remaining (gal),0.0,0.0
+TO_-b/2a Fuel Remaining (gal),0.0,0.0
+TO_a Fuel Remaining (gal),0.0,0.0
+TO_c Fuel Level R (gal),0.0,0.0
+TO_-b/2a Fuel Level R (gal),0.0,0.0
+TO_c Fuel Level L (gal),0.0,0.0
+C_a Pressure Altitude (ft),0.0,0.0
+C_c Pressure Altitude (ft),0.0,0.0
+C_-b/2a EGT Leaning State,0.0,0.0
+C_c CHT 5 (deg C),0.0,0.0
+C_c EGT 2 (deg C),0.0,0.0
+C_-b/2a EGT 2 (deg C),0.0,0.0
+C_a EGT 2 (deg C),0.0,0.0
+C_c CHT 2 (deg C),0.0,0.0
+C_-b/2a CHT 2 (deg C),0.0,0.0
+C_a CHT 2 (deg C),0.0,0.0
+C_c EGT 3 (deg C),0.0,0.0
+C_-b/2a EGT 3 (deg C),0.0,0.0
+C_a EGT 3 (deg C),0.0,0.0
+C_c CHT 3 (deg C),0.0,0.0
+C_-b/2a CHT 3 (deg C),0.0,0.0
+C_a CHT 3 (deg C),0.0,0.0
+C_-b/2a EGT 4 (deg C),0.0,0.0
+C_a EGT 4 (deg C),0.0,0.0
+C_c CHT 4 (deg C),0.0,0.0
+C_-b/2a CHT 4 (deg C),0.0,0.0
+C_a CHT 4 (deg C),0.0,0.0
+C_c EGT 5 (deg C),0.0,0.0
+C_-b/2a EGT 5 (deg C),0.0,0.0
+C_a CHT 1 (deg C),0.0,0.0
+C_c CHT 1 (deg C),0.0,0.0
+C_a EGT 1 (deg C),0.0,0.0
+C_-b/2a CANOPY CONTACT (V),0.0,0.0
+C_a EGT Leaning State,0.0,0.0
+C_c Percent Power,0.0,0.0
+C_-b/2a Percent Power,0.0,0.0
+C_a Percent Power,0.0,0.0
+C_c OIL TEMPERATURE (deg C),0.0,0.0
+C_-b/2a OIL TEMPERATURE (deg C),0.0,0.0
+C_a OIL TEMPERATURE (deg C),0.0,0.0
+C_c CANOPY CONTACT (V),0.0,0.0
+C_a CANOPY CONTACT (V),0.0,0.0
+C_-b/2a EGT 1 (deg C),0.0,0.0
+C_c FUEL CONTACT (V),0.0,0.0
+C_-b/2a FUEL CONTACT (V),0.0,0.0
+C_a FUEL CONTACT (V),0.0,0.0
+C_c CABIN TEMPERATURE (deg C),0.0,0.0
+C_-b/2a CABIN TEMPERATURE (deg C),0.0,0.0
+C_c ALT CONTACT (V),0.0,0.0
+C_-b/2a ALT CONTACT (V),0.0,0.0
+C_c EGT 1 (deg C),0.0,0.0
+C_a EGT 5 (deg C),0.0,0.0
+C_-b/2a CHT 5 (deg C),0.0,0.0
+C_a Angle of Attack (%),0.0,0.0
+C_c EGT 6 (deg C),0.0,0.0
+C_c Manifold Pressure (inHg),0.0,0.0
+C_a Manifold Pressure (inHg),0.0,0.0
+C_c RPM L,0.0,0.0
+C_a RPM L,0.0,0.0
+C_c Oil Pressure (PSI),0.0,0.0
+C_-b/2a Oil Pressure (PSI),0.0,0.0
+C_c Barometer Setting (inHg),0.0,0.0
+C_a Barometer Setting (inHg),0.0,0.0
+C_c True Airspeed (knots),0.0,0.0
+C_-b/2a True Airspeed (knots),0.0,0.0
+C_a True Airspeed (knots),0.0,0.0
+C_c OAT (deg C),0.0,0.0
+C_-b/2a OAT (deg C),0.0,0.0
+C_a OAT (deg C),0.0,0.0
+C_c Vertical Speed (ft/min),0.0,0.0
+C_-b/2a Vertical Speed (ft/min),0.0,0.0
+C_a Vertical Speed (ft/min),0.0,0.0
+C_c Angle of Attack (%),0.0,0.0
+C_-b/2a Angle of Attack (%),0.0,0.0
+C_a Fuel Flow 1 (gal/hr),0.0,0.0
+C_-b/2a Fuel Flow 1 (gal/hr),0.0,0.0
+C_c Fuel Flow 1 (gal/hr),0.0,0.0
+C_a Volts 1,0.0,0.0
+C_-b/2a EGT 6 (deg C),0.0,0.0
+C_-b/2a CHT 6 (deg C),0.0,0.0
+C_a CHT 6 (deg C),0.0,0.0
+C_c Amps,0.0,0.0
+C_-b/2a Amps,0.0,0.0
+C_a Amps,0.0,0.0
+C_c Volts 1,0.0,0.0
+C_-b/2a Volts 1,0.0,0.0
+C_c Fuel Remaining (gal),0.0,0.0
+C_a Fuel Pressure (PSI),0.0,0.0
+C_-b/2a Fuel Remaining (gal),0.0,0.0
+C_a Fuel Remaining (gal),0.0,0.0
+C_c Fuel Level R (gal),0.0,0.0
+C_-b/2a Fuel Level R (gal),0.0,0.0
+C_a Fuel Level R (gal),0.0,0.0
+C_-b/2a Fuel Level L (gal),0.0,0.0
+C_c Fuel Pressure (PSI),0.0,0.0
+C_-b/2a Fuel Pressure (PSI),0.0,0.0
+D_SF EGT 5 (deg C),0.0,0.0
+D_MeanF CANOPY CONTACT (V),0.0,0.0
+D_SF EGT 6 (deg C),0.0,0.0
+TO_SF EGT Leaning State,0.0,0.0
+TO_SF OIL TEMPERATURE (deg C),0.0,0.0
+TO_SF CANOPY CONTACT (V),0.0,0.0
+TO_SF FUEL CONTACT (V),0.0,0.0
+TO_SF CABIN TEMPERATURE (deg C),0.0,0.0
+TO_SF EGT 1 (deg C),0.0,0.0
+TO_SF CHT 1 (deg C),0.0,0.0
+TO_SF EGT 2 (deg C),0.0,0.0
+TO_SF CHT 2 (deg C),0.0,0.0
+TO_SF EGT 3 (deg C),0.0,0.0
+TO_SF CHT 3 (deg C),0.0,0.0
+TO_SF CHT 4 (deg C),0.0,0.0
+TO_SF EGT 5 (deg C),0.0,0.0
+TO_SF CHT 5 (deg C),0.0,0.0
+TO_SF CHT 6 (deg C),0.0,0.0
+TO_SF Amps,0.0,0.0
+TO_SF Volts 1,0.0,0.0
+TO_SF Fuel Remaining (gal),0.0,0.0
+TO_SF Fuel Level R (gal),0.0,0.0
+TO_SF Fuel Level L (gal),0.0,0.0
+TO_SF Percent Power,0.0,0.0
+C_Kurtosis Pitch (deg),0.0,0.0
+TO_SF Fuel Flow 1 (gal/hr),0.0,0.0
+C_Kurtosis Pressure Altitude (ft),0.0,0.0
+C_Kurtosis EGT 3 (deg C),0.0,0.0
+C_Kurtosis CHT 3 (deg C),0.0,0.0
+C_Kurtosis EGT 4 (deg C),0.0,0.0
+C_Kurtosis CHT 4 (deg C),0.0,0.0
+C_Kurtosis EGT 5 (deg C),0.0,0.0
+C_Kurtosis EGT 6 (deg C),0.0,0.0
+C_Kurtosis CHT 6 (deg C),0.0,0.0
+C_Kurtosis Amps,0.0,0.0
+C_Kurtosis Volts 1,0.0,0.0
+C_Kurtosis Fuel Remaining (gal),0.0,0.0
+C_Kurtosis Fuel Pressure (PSI),0.0,0.0
+C_Kurtosis Fuel Flow 1 (gal/hr),0.0,0.0
+C_Kurtosis Manifold Pressure (inHg),0.0,0.0
+C_Kurtosis RPM L,0.0,0.0
+C_Kurtosis Oil Pressure (PSI),0.0,0.0
+C_Kurtosis Barometer Setting (inHg),0.0,0.0
+C_Kurtosis True Airspeed (knots),0.0,0.0
+C_Kurtosis OAT (deg C),0.0,0.0
+C_Kurtosis Vertical Speed (ft/min),0.0,0.0
+TO_SF Fuel Pressure (PSI),0.0,0.0
+TO_SF RPM L,0.0,0.0
+D_SF CHT 6 (deg C),0.0,0.0
+TO_MedF EGT 6 (deg C),0.0,0.0
+TO_MedF Amps,0.0,0.0
+TO_MedF Volts 1,0.0,0.0
+TO_MedF Fuel Remaining (gal),0.0,0.0
+TO_MedF Fuel Level R (gal),0.0,0.0
+TO_MedF Fuel Level L (gal),0.0,0.0
+TO_MedF Fuel Pressure (PSI),0.0,0.0
+TO_MedF Fuel Flow 1 (gal/hr),0.0,0.0
+TO_MedF Manifold Pressure (inHg),0.0,0.0
+TO_MedF RPM L,0.0,0.0
+TO_MedF Oil Pressure (PSI),0.0,0.0
+TO_MedF Barometer Setting (inHg),0.0,0.0
+TO_MedF True Airspeed (knots),0.0,0.0
+TO_MedF OAT (deg C),0.0,0.0
+TO_MedF Vertical Speed (ft/min),0.0,0.0
+TO_MedF Angle of Attack (%),0.0,0.0
+TO_MedF Pressure Altitude (ft),0.0,0.0
+TO_MedF Pitch (deg),0.0,0.0
+TO_MeanF Percent Power,0.0,0.0
+TO_MeanF CANOPY CONTACT (V),0.0,0.0
+TO_MedF CHT 6 (deg C),0.0,0.0
+TO_MedF CHT 5 (deg C),0.0,0.0
+TO_SF Oil Pressure (PSI),0.0,0.0
+TO_MedF EGT 5 (deg C),0.0,0.0
+TO_SF Barometer Setting (inHg),0.0,0.0
+TO_SF True Airspeed (knots),0.0,0.0
+TO_SF OAT (deg C),0.0,0.0
+TO_SF Vertical Speed (ft/min),0.0,0.0
+TO_SF Angle of Attack (%),0.0,0.0
+TO_SF Pressure Altitude (ft),0.0,0.0
+TO_SF Pitch (deg),0.0,0.0
+TO_MedF EGT Leaning State,0.0,0.0
+TO_MedF Percent Power,0.0,0.0
+TO_MedF OIL TEMPERATURE (deg C),0.0,0.0
+TO_MedF FUEL CONTACT (V),0.0,0.0
+TO_MedF CABIN TEMPERATURE (deg C),0.0,0.0
+TO_MedF EGT 1 (deg C),0.0,0.0
+TO_MedF EGT 2 (deg C),0.0,0.0
+TO_MedF CHT 2 (deg C),0.0,0.0
+TO_MedF EGT 3 (deg C),0.0,0.0
+TO_MedF CHT 3 (deg C),0.0,0.0
+TO_MedF EGT 4 (deg C),0.0,0.0
+TO_MedF CHT 4 (deg C),0.0,0.0
+C_Kurtosis CHT 2 (deg C),0.0,0.0
+C_Kurtosis EGT 2 (deg C),0.0,0.0
+C_Kurtosis CHT 1 (deg C),0.0,0.0
+C_RMS CABIN TEMPERATURE (deg C),0.0,0.0
+C_RMS EGT 1 (deg C),0.0,0.0
+C_RMS CHT 1 (deg C),0.0,0.0
+C_RMS EGT 2 (deg C),0.0,0.0
+C_RMS CHT 2 (deg C),0.0,0.0
+C_RMS EGT 3 (deg C),0.0,0.0
+C_RMS CHT 3 (deg C),0.0,0.0
+C_RMS EGT 4 (deg C),0.0,0.0
+C_RMS CHT 4 (deg C),0.0,0.0
+C_RMS EGT 5 (deg C),0.0,0.0
+C_RMS CHT 5 (deg C),0.0,0.0
+C_RMS EGT 6 (deg C),0.0,0.0
+C_RMS CHT 6 (deg C),0.0,0.0
+C_RMS Amps,0.0,0.0
+C_RMS Volts 1,0.0,0.0
+C_RMS Fuel Remaining (gal),0.0,0.0
+C_RMS Fuel Level R (gal),0.0,0.0
+C_RMS Fuel Level L (gal),0.0,0.0
+C_RMS Fuel Pressure (PSI),0.0,0.0
+C_RMS Fuel Flow 1 (gal/hr),0.0,0.0
+C_RMS ALT CONTACT (V),0.0,0.0
+C_RMS FUEL CONTACT (V),0.0,0.0
+C_Kurtosis EGT 1 (deg C),0.0,0.0
+C_RMS CANOPY CONTACT (V),0.0,0.0
+C_Mean EGT 4 (deg C),0.0,0.0
+C_Mean CHT 4 (deg C),0.0,0.0
+C_Mean EGT 6 (deg C),0.0,0.0
+C_Mean CHT 6 (deg C),0.0,0.0
+C_Mean Volts 1,0.0,0.0
+C_Mean Fuel Remaining (gal),0.0,0.0
+C_Mean Fuel Level R (gal),0.0,0.0
+C_Mean Fuel Level L (gal),0.0,0.0
+C_Mean Fuel Flow 1 (gal/hr),0.0,0.0
+C_Mean RPM L,0.0,0.0
+C_Mean Oil Pressure (PSI),0.0,0.0
+C_Mean Barometer Setting (inHg),0.0,0.0
+C_Mean True Airspeed (knots),0.0,0.0
+C_Mean OAT (deg C),0.0,0.0
+C_Mean Vertical Speed (ft/min),0.0,0.0
+C_Mean Pressure Altitude (ft),0.0,0.0
+C_RMS EGT Leaning State,0.0,0.0
+C_RMS Percent Power,0.0,0.0
+C_RMS OIL TEMPERATURE (deg C),0.0,0.0
+C_RMS Manifold Pressure (inHg),0.0,0.0
+C_RMS RPM L,0.0,0.0
+C_RMS Oil Pressure (PSI),0.0,0.0
+C_RMS Barometer Setting (inHg),0.0,0.0
+C_Skewness Volts 1,0.0,0.0
+C_Skewness Fuel Remaining (gal),0.0,0.0
+C_Skewness Fuel Level R (gal),0.0,0.0
+C_Skewness Fuel Flow 1 (gal/hr),0.0,0.0
+C_Skewness Manifold Pressure (inHg),0.0,0.0
+C_Skewness RPM L,0.0,0.0
+C_Skewness Oil Pressure (PSI),0.0,0.0
+C_Skewness True Airspeed (knots),0.0,0.0
+C_Skewness OAT (deg C),0.0,0.0
+C_Skewness Vertical Speed (ft/min),0.0,0.0
+C_Skewness Angle of Attack (%),0.0,0.0
+C_Skewness Pressure Altitude (ft),0.0,0.0
+C_Kurtosis EGT Leaning State,0.0,0.0
+C_Kurtosis Percent Power,0.0,0.0
+C_Kurtosis OIL TEMPERATURE (deg C),0.0,0.0
+C_Kurtosis CANOPY CONTACT (V),0.0,0.0
+C_Kurtosis FUEL CONTACT (V),0.0,0.0
+C_Kurtosis CABIN TEMPERATURE (deg C),0.0,0.0
+C_Kurtosis ALT CONTACT (V),0.0,0.0
+C_Skewness Amps,0.0,0.0
+C_Skewness CHT 6 (deg C),0.0,0.0
+C_Skewness EGT 6 (deg C),0.0,0.0
+C_Skewness CABIN TEMPERATURE (deg C),0.0,0.0
+C_RMS True Airspeed (knots),0.0,0.0
+C_RMS Vertical Speed (ft/min),0.0,0.0
+C_RMS Pressure Altitude (ft),0.0,0.0
+C_RMS Pitch (deg),0.0,0.0
+C_Skewness EGT Leaning State,0.0,0.0
+C_Skewness Percent Power,0.0,0.0
+C_Skewness CANOPY CONTACT (V),0.0,0.0
+C_Skewness FUEL CONTACT (V),0.0,0.0
+C_Skewness ALT CONTACT (V),0.0,0.0
+C_Skewness CHT 5 (deg C),0.0,0.0
+C_Skewness EGT 1 (deg C),0.0,0.0
+C_Skewness CHT 1 (deg C),0.0,0.0
+C_Skewness EGT 2 (deg C),0.0,0.0
+C_Skewness CHT 2 (deg C),0.0,0.0
+C_Skewness EGT 3 (deg C),0.0,0.0
+C_Skewness CHT 3 (deg C),0.0,0.0
+C_Skewness CHT 4 (deg C),0.0,0.0
+C_Skewness EGT 5 (deg C),0.0,0.0
+TO_MeanF FUEL CONTACT (V),0.0,0.0
+TO_MeanF CABIN TEMPERATURE (deg C),0.0,0.0
+TO_MeanF EGT 1 (deg C),0.0,0.0
+TO_RMS Barometer Setting (inHg),0.0,0.0
+TO_RMS OAT (deg C),0.0,0.0
+TO_RMS Vertical Speed (ft/min),0.0,0.0
+TO_RMS Angle of Attack (%),0.0,0.0
+TO_RMS Pressure Altitude (ft),0.0,0.0
+TO_RMS Pitch (deg),0.0,0.0
+TO_Skewness EGT Leaning State,0.0,0.0
+TO_Skewness Percent Power,0.0,0.0
+TO_Skewness CANOPY CONTACT (V),0.0,0.0
+TO_Skewness FUEL CONTACT (V),0.0,0.0
+TO_Skewness CABIN TEMPERATURE (deg C),0.0,0.0
+TO_Skewness ALT CONTACT (V),0.0,0.0
+TO_Skewness EGT 1 (deg C),0.0,0.0
+TO_Skewness EGT 2 (deg C),0.0,0.0
+TO_Skewness CHT 2 (deg C),0.0,0.0
+TO_Skewness EGT 3 (deg C),0.0,0.0
+TO_Skewness CHT 3 (deg C),0.0,0.0
+TO_Skewness CHT 4 (deg C),0.0,0.0
+TO_Skewness EGT 5 (deg C),0.0,0.0
+TO_Skewness CHT 5 (deg C),0.0,0.0
+TO_RMS True Airspeed (knots),0.0,0.0
+TO_RMS Oil Pressure (PSI),0.0,0.0
+TO_RMS FUEL CONTACT (V),0.0,0.0
+TO_RMS RPM L,0.0,0.0
+TO_RMS EGT 1 (deg C),0.0,0.0
+TO_RMS CHT 1 (deg C),0.0,0.0
+TO_RMS EGT 2 (deg C),0.0,0.0
+TO_RMS CHT 2 (deg C),0.0,0.0
+TO_RMS EGT 3 (deg C),0.0,0.0
+TO_RMS CHT 3 (deg C),0.0,0.0
+TO_RMS EGT 4 (deg C),0.0,0.0
+TO_RMS CHT 4 (deg C),0.0,0.0
+TO_RMS EGT 5 (deg C),0.0,0.0
+TO_RMS CHT 5 (deg C),0.0,0.0
+TO_RMS EGT 6 (deg C),0.0,0.0
+TO_RMS Amps,0.0,0.0
+TO_RMS Volts 1,0.0,0.0
+TO_RMS Fuel Remaining (gal),0.0,0.0
+TO_RMS Fuel Level R (gal),0.0,0.0
+TO_RMS Fuel Level L (gal),0.0,0.0
+TO_RMS Fuel Pressure (PSI),0.0,0.0
+TO_RMS Fuel Flow 1 (gal/hr),0.0,0.0
+TO_RMS Manifold Pressure (inHg),0.0,0.0
+TO_Skewness EGT 6 (deg C),0.0,0.0
+TO_Skewness Amps,0.0,0.0
+TO_Skewness Volts 1,0.0,0.0
+TO_Skewness Fuel Remaining (gal),0.0,0.0
+TO_Kurtosis CHT 3 (deg C),0.0,0.0
+TO_Kurtosis EGT 4 (deg C),0.0,0.0
+TO_Kurtosis CHT 4 (deg C),0.0,0.0
+TO_Kurtosis EGT 5 (deg C),0.0,0.0
+TO_Kurtosis CHT 5 (deg C),0.0,0.0
+TO_Kurtosis EGT 6 (deg C),0.0,0.0
+TO_Kurtosis CHT 6 (deg C),0.0,0.0
+TO_Kurtosis Amps,0.0,0.0
+TO_Kurtosis Volts 1,0.0,0.0
+TO_Kurtosis Fuel Remaining (gal),0.0,0.0
+TO_Kurtosis Fuel Pressure (PSI),0.0,0.0
+TO_Kurtosis Fuel Flow 1 (gal/hr),0.0,0.0
+TO_Kurtosis Manifold Pressure (inHg),0.0,0.0
+TO_Kurtosis RPM L,0.0,0.0
+TO_Kurtosis Oil Pressure (PSI),0.0,0.0
+TO_Kurtosis Barometer Setting (inHg),0.0,0.0
+TO_Kurtosis True Airspeed (knots),0.0,0.0
+TO_Kurtosis Vertical Speed (ft/min),0.0,0.0
+TO_Kurtosis Angle of Attack (%),0.0,0.0
+TO_Kurtosis EGT 3 (deg C),0.0,0.0
+TO_Kurtosis CHT 2 (deg C),0.0,0.0
+TO_Kurtosis EGT 2 (deg C),0.0,0.0
+TO_Skewness Angle of Attack (%),0.0,0.0
+TO_Skewness Fuel Level R (gal),0.0,0.0
+TO_Skewness Fuel Level L (gal),0.0,0.0
+TO_Skewness Manifold Pressure (inHg),0.0,0.0
+TO_Skewness Oil Pressure (PSI),0.0,0.0
+TO_Skewness Barometer Setting (inHg),0.0,0.0
+TO_Skewness True Airspeed (knots),0.0,0.0
+TO_Skewness OAT (deg C),0.0,0.0
+TO_Skewness Vertical Speed (ft/min),0.0,0.0
+TO_Skewness Pressure Altitude (ft),0.0,0.0
+TO_Kurtosis CHT 1 (deg C),0.0,0.0
+TO_Skewness Pitch (deg),0.0,0.0
+TO_Kurtosis EGT Leaning State,0.0,0.0
+TO_Kurtosis Percent Power,0.0,0.0
+TO_Kurtosis OIL TEMPERATURE (deg C),0.0,0.0
+TO_Kurtosis CANOPY CONTACT (V),0.0,0.0
+TO_Kurtosis FUEL CONTACT (V),0.0,0.0
+TO_Kurtosis CABIN TEMPERATURE (deg C),0.0,0.0
+TO_Kurtosis ALT CONTACT (V),0.0,0.0
+TO_RMS CABIN TEMPERATURE (deg C),0.0,0.0
+TO_RMS CANOPY CONTACT (V),0.0,0.0
+TO_MeanF CHT 1 (deg C),0.0,0.0
+TO_MeanF True Airspeed (knots),0.0,0.0
+TO_MeanF Pressure Altitude (ft),0.0,0.0
+TO_MeanF Pitch (deg),0.0,0.0
+TO_CoV Percent Power,0.0,0.0
+TO_CoV OIL TEMPERATURE (deg C),0.0,0.0
+TO_CoV CANOPY CONTACT (V),0.0,0.0
+TO_CoV FUEL CONTACT (V),0.0,0.0
+TO_CoV CABIN TEMPERATURE (deg C),0.0,0.0
+TO_CoV ALT CONTACT (V),0.0,0.0
+TO_CoV EGT 1 (deg C),0.0,0.0
+TO_CoV CHT 1 (deg C),0.0,0.0
+TO_CoV EGT 2 (deg C),0.0,0.0
+TO_CoV CHT 2 (deg C),0.0,0.0
+TO_CoV EGT 3 (deg C),0.0,0.0
+TO_CoV CHT 3 (deg C),0.0,0.0
+TO_CoV EGT 4 (deg C),0.0,0.0
+TO_CoV CHT 4 (deg C),0.0,0.0
+TO_CoV EGT 5 (deg C),0.0,0.0
+TO_CoV CHT 5 (deg C),0.0,0.0
+TO_CoV EGT 6 (deg C),0.0,0.0
+TO_MeanF Angle of Attack (%),0.0,0.0
+TO_MeanF Barometer Setting (inHg),0.0,0.0
+TO_RMS OIL TEMPERATURE (deg C),0.0,0.0
+TO_MeanF Oil Pressure (PSI),0.0,0.0
+TO_MeanF EGT 2 (deg C),0.0,0.0
+TO_MeanF CHT 2 (deg C),0.0,0.0
+TO_MeanF EGT 3 (deg C),0.0,0.0
+TO_MeanF CHT 3 (deg C),0.0,0.0
+TO_MeanF EGT 4 (deg C),0.0,0.0
+TO_MeanF CHT 4 (deg C),0.0,0.0
+TO_MeanF EGT 5 (deg C),0.0,0.0
+TO_MeanF CHT 5 (deg C),0.0,0.0
+TO_MeanF EGT 6 (deg C),0.0,0.0
+TO_MeanF CHT 6 (deg C),0.0,0.0
+TO_MeanF Amps,0.0,0.0
+TO_MeanF Volts 1,0.0,0.0
+TO_MeanF Fuel Remaining (gal),0.0,0.0
+TO_MeanF Fuel Level R (gal),0.0,0.0
+TO_MeanF Fuel Level L (gal),0.0,0.0
+TO_MeanF Fuel Pressure (PSI),0.0,0.0
+TO_MeanF Fuel Flow 1 (gal/hr),0.0,0.0
+TO_MeanF Manifold Pressure (inHg),0.0,0.0
+TO_MeanF RPM L,0.0,0.0
+TO_CoV CHT 6 (deg C),0.0,0.0
+TO_CoV Amps,0.0,0.0
+TO_CoV Volts 1,0.0,0.0
+TO_CoV Fuel Level R (gal),0.0,0.0
+TO_Mean CHT 4 (deg C),0.0,0.0
+TO_Mean EGT 5 (deg C),0.0,0.0
+TO_Mean EGT 6 (deg C),0.0,0.0
+TO_Mean CHT 6 (deg C),0.0,0.0
+TO_Mean Amps,0.0,0.0
+TO_Mean Fuel Remaining (gal),0.0,0.0
+TO_Mean Fuel Level R (gal),0.0,0.0
+TO_Mean Fuel Level L (gal),0.0,0.0
+TO_Mean Fuel Flow 1 (gal/hr),0.0,0.0
+TO_Mean Manifold Pressure (inHg),0.0,0.0
+TO_Mean Oil Pressure (PSI),0.0,0.0
+TO_Mean Barometer Setting (inHg),0.0,0.0
+TO_Mean True Airspeed (knots),0.0,0.0
+TO_Mean OAT (deg C),0.0,0.0
+TO_Mean Vertical Speed (ft/min),0.0,0.0
+TO_Mean Pressure Altitude (ft),0.0,0.0
+TO_Mean Pitch (deg),0.0,0.0
+TO_RMS EGT Leaning State,0.0,0.0
+TO_RMS Percent Power,0.0,0.0
+TO_Mean CHT 3 (deg C),0.0,0.0
+TO_Mean EGT 3 (deg C),0.0,0.0
+TO_Mean EGT 2 (deg C),0.0,0.0
+TO_CoV OAT (deg C),0.0,0.0
+TO_CoV Fuel Level L (gal),0.0,0.0
+TO_CoV Fuel Pressure (PSI),0.0,0.0
+TO_CoV Fuel Flow 1 (gal/hr),0.0,0.0
+TO_CoV Manifold Pressure (inHg),0.0,0.0
+TO_CoV RPM L,0.0,0.0
+TO_CoV Oil Pressure (PSI),0.0,0.0
+TO_CoV Barometer Setting (inHg),0.0,0.0
+TO_CoV True Airspeed (knots),0.0,0.0
+TO_CoV Vertical Speed (ft/min),0.0,0.0
+TO_Mean EGT 1 (deg C),0.0,0.0
+TO_CoV Angle of Attack (%),0.0,0.0
+TO_CoV Pressure Altitude (ft),0.0,0.0
+TO_CoV Pitch (deg),0.0,0.0
+TO_Mean EGT Leaning State,0.0,0.0
+TO_Mean Percent Power,0.0,0.0
+TO_Mean FUEL CONTACT (V),0.0,0.0
+TO_Mean CABIN TEMPERATURE (deg C),0.0,0.0
+TO_Mean ALT CONTACT (V),0.0,0.0
+C_Mean CHT 3 (deg C),0.0,0.0
+C_Mean EGT 3 (deg C),0.0,0.0
+C_Mean CHT 2 (deg C),0.0,0.0
+D_Mean EGT 2 (deg C),0.0,0.0
+D_Mean CHT 3 (deg C),0.0,0.0
+D_Mean EGT 4 (deg C),0.0,0.0
+D_Mean CHT 4 (deg C),0.0,0.0
+D_Mean EGT 5 (deg C),0.0,0.0
+D_Mean CHT 5 (deg C),0.0,0.0
+D_Mean EGT 6 (deg C),0.0,0.0
+D_Mean CHT 6 (deg C),0.0,0.0
+D_Mean Amps,0.0,0.0
+D_Mean Volts 1,0.0,0.0
+D_Mean Fuel Remaining (gal),0.0,0.0
+D_Mean Fuel Level R (gal),0.0,0.0
+D_Mean Fuel Level L (gal),0.0,0.0
+D_Mean Fuel Pressure (PSI),0.0,0.0
+D_Mean Fuel Flow 1 (gal/hr),0.0,0.0
+D_Mean Manifold Pressure (inHg),0.0,0.0
+D_Mean RPM L,0.0,0.0
+D_Mean Barometer Setting (inHg),0.0,0.0
+D_Mean True Airspeed (knots),0.0,0.0
+D_Mean OAT (deg C),0.0,0.0
+D_Mean CHT 2 (deg C),0.0,0.0
+D_Mean CHT 1 (deg C),0.0,0.0
+D_CoV CHT 5 (deg C),0.0,0.0
+D_Mean EGT 1 (deg C),0.0,0.0
+D_CoV CHT 6 (deg C),0.0,0.0
+D_CoV Volts 1,0.0,0.0
+D_CoV Fuel Level R (gal),0.0,0.0
+D_CoV Fuel Level L (gal),0.0,0.0
+D_CoV Fuel Pressure (PSI),0.0,0.0
+D_CoV Fuel Flow 1 (gal/hr),0.0,0.0
+D_CoV Manifold Pressure (inHg),0.0,0.0
+D_CoV RPM L,0.0,0.0
+D_CoV Oil Pressure (PSI),0.0,0.0
+D_CoV True Airspeed (knots),0.0,0.0
+D_CoV OAT (deg C),0.0,0.0
+D_CoV Vertical Speed (ft/min),0.0,0.0
+D_CoV Angle of Attack (%),0.0,0.0
+D_CoV Pressure Altitude (ft),0.0,0.0
+D_CoV Pitch (deg),0.0,0.0
+D_Mean Percent Power,0.0,0.0
+D_Mean OIL TEMPERATURE (deg C),0.0,0.0
+D_Mean CABIN TEMPERATURE (deg C),0.0,0.0
+D_Mean ALT CONTACT (V),0.0,0.0
+D_Mean Vertical Speed (ft/min),0.0,0.0
+D_Mean Angle of Attack (%),0.0,0.0
+D_RMS Percent Power,0.0,0.0
+D_RMS OIL TEMPERATURE (deg C),0.0,0.0
+D_RMS Oil Pressure (PSI),0.0,0.0
+D_RMS Barometer Setting (inHg),0.0,0.0
+D_RMS True Airspeed (knots),0.0,0.0
+D_RMS OAT (deg C),0.0,0.0
+D_RMS Vertical Speed (ft/min),0.0,0.0
+D_RMS Angle of Attack (%),0.0,0.0
+D_RMS Pressure Altitude (ft),0.0,0.0
+D_RMS Pitch (deg),0.0,0.0
+D_Skewness Percent Power,0.0,0.0
+D_Skewness FUEL CONTACT (V),0.0,0.0
+D_Skewness CABIN TEMPERATURE (deg C),0.0,0.0
+D_Skewness ALT CONTACT (V),0.0,0.0
+D_Skewness EGT 1 (deg C),0.0,0.0
+D_Skewness CHT 1 (deg C),0.0,0.0
+D_Skewness EGT 2 (deg C),0.0,0.0
+D_Skewness CHT 2 (deg C),0.0,0.0
+D_Skewness EGT 3 (deg C),0.0,0.0
+D_Skewness CHT 3 (deg C),0.0,0.0
+D_Skewness CHT 4 (deg C),0.0,0.0
+D_RMS RPM L,0.0,0.0
+D_RMS Manifold Pressure (inHg),0.0,0.0
+D_RMS Fuel Pressure (PSI),0.0,0.0
+D_RMS CHT 3 (deg C),0.0,0.0
+D_RMS CANOPY CONTACT (V),0.0,0.0
+D_RMS FUEL CONTACT (V),0.0,0.0
+D_RMS CABIN TEMPERATURE (deg C),0.0,0.0
+D_RMS ALT CONTACT (V),0.0,0.0
+D_RMS EGT 1 (deg C),0.0,0.0
+D_RMS EGT 2 (deg C),0.0,0.0
+D_RMS CHT 2 (deg C),0.0,0.0
+D_RMS EGT 3 (deg C),0.0,0.0
+D_RMS EGT 4 (deg C),0.0,0.0
+D_RMS Fuel Level L (gal),0.0,0.0
+D_RMS CHT 4 (deg C),0.0,0.0
+D_RMS EGT 5 (deg C),0.0,0.0
+D_RMS EGT 6 (deg C),0.0,0.0
+D_RMS CHT 6 (deg C),0.0,0.0
+D_RMS Amps,0.0,0.0
+D_RMS Volts 1,0.0,0.0
+D_RMS Fuel Remaining (gal),0.0,0.0
+D_RMS Fuel Level R (gal),0.0,0.0
+D_CoV EGT 6 (deg C),0.0,0.0
+D_CoV EGT 5 (deg C),0.0,0.0
+D_Skewness CHT 5 (deg C),0.0,0.0
+D_MedF CHT 2 (deg C),0.0,0.0
+D_MedF CHT 3 (deg C),0.0,0.0
+D_MedF EGT 4 (deg C),0.0,0.0
+D_MedF CHT 4 (deg C),0.0,0.0
+D_MedF EGT 5 (deg C),0.0,0.0
+D_MedF CHT 5 (deg C),0.0,0.0
+D_MedF CHT 6 (deg C),0.0,0.0
+D_MedF Amps,0.0,0.0
+D_MedF Volts 1,0.0,0.0
+D_MedF Fuel Remaining (gal),0.0,0.0
+D_MedF Fuel Level R (gal),0.0,0.0
+D_MedF Fuel Level L (gal),0.0,0.0
+D_MedF Fuel Flow 1 (gal/hr),0.0,0.0
+D_MedF Manifold Pressure (inHg),0.0,0.0
+D_MedF RPM L,0.0,0.0
+D_MedF Barometer Setting (inHg),0.0,0.0
+D_MedF True Airspeed (knots),0.0,0.0
+D_MedF OAT (deg C),0.0,0.0
+D_MedF Vertical Speed (ft/min),0.0,0.0
+D_MedF Angle of Attack (%),0.0,0.0
+D_MedF EGT 3 (deg C),0.0,0.0
+D_MedF EGT 2 (deg C),0.0,0.0
+D_CoV CHT 4 (deg C),0.0,0.0
+D_MedF CHT 1 (deg C),0.0,0.0
+D_SF Amps,0.0,0.0
+D_SF Volts 1,0.0,0.0
+D_SF Fuel Remaining (gal),0.0,0.0
+D_SF Fuel Pressure (PSI),0.0,0.0
+D_SF Manifold Pressure (inHg),0.0,0.0
+D_SF RPM L,0.0,0.0
+D_SF Barometer Setting (inHg),0.0,0.0
+D_SF True Airspeed (knots),0.0,0.0
+D_SF OAT (deg C),0.0,0.0
+D_SF Vertical Speed (ft/min),0.0,0.0
+D_SF Angle of Attack (%),0.0,0.0
+D_SF Pressure Altitude (ft),0.0,0.0
+D_SF Pitch (deg),0.0,0.0
+D_MedF EGT Leaning State,0.0,0.0
+D_MedF OIL TEMPERATURE (deg C),0.0,0.0
+D_MedF FUEL CONTACT (V),0.0,0.0
+D_MedF CABIN TEMPERATURE (deg C),0.0,0.0
+D_MedF ALT CONTACT (V),0.0,0.0
+D_MedF EGT 1 (deg C),0.0,0.0
+D_MedF Pressure Altitude (ft),0.0,0.0
+D_MedF Pitch (deg),0.0,0.0
+D_MeanF EGT Leaning State,0.0,0.0
+D_MeanF Percent Power,0.0,0.0
+D_MeanF RPM L,0.0,0.0
+D_MeanF Oil Pressure (PSI),0.0,0.0
+D_MeanF Barometer Setting (inHg),0.0,0.0
+D_MeanF True Airspeed (knots),0.0,0.0
+D_MeanF OAT (deg C),0.0,0.0
+D_MeanF Angle of Attack (%),0.0,0.0
+D_MeanF Pressure Altitude (ft),0.0,0.0
+D_MeanF Pitch (deg),0.0,0.0
+D_CoV Percent Power,0.0,0.0
+D_CoV OIL TEMPERATURE (deg C),0.0,0.0
+D_CoV CANOPY CONTACT (V),0.0,0.0
+D_CoV FUEL CONTACT (V),0.0,0.0
+D_CoV EGT 1 (deg C),0.0,0.0
+D_CoV CHT 1 (deg C),0.0,0.0
+D_CoV EGT 2 (deg C),0.0,0.0
+D_CoV CHT 2 (deg C),0.0,0.0
+D_CoV EGT 3 (deg C),0.0,0.0
+D_CoV CHT 3 (deg C),0.0,0.0
+D_CoV EGT 4 (deg C),0.0,0.0
+D_MeanF Fuel Flow 1 (gal/hr),0.0,0.0
+D_MeanF Fuel Level L (gal),0.0,0.0
+D_MeanF Fuel Level R (gal),0.0,0.0
+D_MeanF EGT 3 (deg C),0.0,0.0
+D_MeanF OIL TEMPERATURE (deg C),0.0,0.0
+TO_Kurtosis Pressure Altitude (ft),0.0,0.0
+D_MeanF FUEL CONTACT (V),0.0,0.0
+D_MeanF CABIN TEMPERATURE (deg C),0.0,0.0
+D_MeanF ALT CONTACT (V),0.0,0.0
+D_MeanF EGT 1 (deg C),0.0,0.0
+D_MeanF CHT 1 (deg C),0.0,0.0
+D_MeanF CHT 2 (deg C),0.0,0.0
+D_MeanF CHT 3 (deg C),0.0,0.0
+D_MeanF Fuel Remaining (gal),0.0,0.0
+D_MeanF EGT 4 (deg C),0.0,0.0
+D_MeanF CHT 4 (deg C),0.0,0.0
+D_MeanF EGT 5 (deg C),0.0,0.0
+D_MeanF CHT 5 (deg C),0.0,0.0
+D_MeanF EGT 6 (deg C),0.0,0.0
+D_MeanF CHT 6 (deg C),0.0,0.0
+D_MeanF Amps,0.0,0.0
+D_MeanF Volts 1,0.0,0.0
+D_Skewness EGT 5 (deg C),0.0,0.0
+D_Skewness EGT 6 (deg C),0.0,0.0
+C_Mean CHT 1 (deg C),0.0,0.0
+C_MeanF CANOPY CONTACT (V),0.0,0.0
+C_MeanF CABIN TEMPERATURE (deg C),0.0,0.0
+C_MeanF ALT CONTACT (V),0.0,0.0
+C_MeanF EGT 1 (deg C),0.0,0.0
+C_MeanF CHT 1 (deg C),0.0,0.0
+C_MeanF EGT 2 (deg C),0.0,0.0
+C_MeanF CHT 2 (deg C),0.0,0.0
+C_MeanF EGT 3 (deg C),0.0,0.0
+C_MeanF CHT 3 (deg C),0.0,0.0
+C_MeanF EGT 4 (deg C),0.0,0.0
+C_MeanF CHT 4 (deg C),0.0,0.0
+C_MeanF EGT 5 (deg C),0.0,0.0
+C_MeanF CHT 5 (deg C),0.0,0.0
+C_MeanF EGT 6 (deg C),0.0,0.0
+C_MeanF CHT 6 (deg C),0.0,0.0
+C_MeanF Amps,0.0,0.0
+C_MeanF Fuel Remaining (gal),0.0,0.0
+C_MeanF Fuel Level R (gal),0.0,0.0
+C_MeanF Fuel Level L (gal),0.0,0.0
+C_MeanF Fuel Pressure (PSI),0.0,0.0
+C_MeanF FUEL CONTACT (V),0.0,0.0
+C_MeanF OIL TEMPERATURE (deg C),0.0,0.0
+C_MedF CHT 4 (deg C),0.0,0.0
+C_MeanF EGT Leaning State,0.0,0.0
+C_MedF CHT 5 (deg C),0.0,0.0
+C_MedF EGT 6 (deg C),0.0,0.0
+C_MedF CHT 6 (deg C),0.0,0.0
+C_MedF Amps,0.0,0.0
+C_MedF Volts 1,0.0,0.0
+C_MedF Fuel Remaining (gal),0.0,0.0
+C_MedF Fuel Level R (gal),0.0,0.0
+C_MedF Fuel Level L (gal),0.0,0.0
+C_MedF Fuel Pressure (PSI),0.0,0.0
+C_MedF Manifold Pressure (inHg),0.0,0.0
+C_MedF RPM L,0.0,0.0
+C_MedF Oil Pressure (PSI),0.0,0.0
+C_MedF Barometer Setting (inHg),0.0,0.0
+C_MedF True Airspeed (knots),0.0,0.0
+C_MedF OAT (deg C),0.0,0.0
+C_MedF Vertical Speed (ft/min),0.0,0.0
+C_MedF Angle of Attack (%),0.0,0.0
+C_MedF Pressure Altitude (ft),0.0,0.0
+C_MedF Pitch (deg),0.0,0.0
+C_MeanF Fuel Flow 1 (gal/hr),0.0,0.0
+C_MeanF Manifold Pressure (inHg),0.0,0.0
+C_MeanF RPM L,0.0,0.0
+C_MeanF Barometer Setting (inHg),0.0,0.0
+C_CoV CHT 6 (deg C),0.0,0.0
+C_CoV Fuel Remaining (gal),0.0,0.0
+C_CoV Fuel Level R (gal),0.0,0.0
+C_CoV Fuel Level L (gal),0.0,0.0
+C_CoV Fuel Pressure (PSI),0.0,0.0
+C_CoV Fuel Flow 1 (gal/hr),0.0,0.0
+C_CoV Manifold Pressure (inHg),0.0,0.0
+C_CoV RPM L,0.0,0.0
+C_CoV Oil Pressure (PSI),0.0,0.0
+C_CoV Barometer Setting (inHg),0.0,0.0
+C_CoV True Airspeed (knots),0.0,0.0
+C_CoV OAT (deg C),0.0,0.0
+C_CoV Vertical Speed (ft/min),0.0,0.0
+C_CoV Angle of Attack (%),0.0,0.0
+C_CoV Pressure Altitude (ft),0.0,0.0
+C_Mean EGT Leaning State,0.0,0.0
+C_Mean Percent Power,0.0,0.0
+C_Mean CANOPY CONTACT (V),0.0,0.0
+C_Mean CABIN TEMPERATURE (deg C),0.0,0.0
+C_CoV EGT 6 (deg C),0.0,0.0
+C_CoV CHT 5 (deg C),0.0,0.0
+C_CoV EGT 5 (deg C),0.0,0.0
+C_CoV CANOPY CONTACT (V),0.0,0.0
+C_MeanF OAT (deg C),0.0,0.0
+C_MeanF Vertical Speed (ft/min),0.0,0.0
+C_MeanF Angle of Attack (%),0.0,0.0
+C_MeanF Pressure Altitude (ft),0.0,0.0
+C_MeanF Pitch (deg),0.0,0.0
+C_CoV EGT Leaning State,0.0,0.0
+C_CoV Percent Power,0.0,0.0
+C_CoV OIL TEMPERATURE (deg C),0.0,0.0
+C_CoV FUEL CONTACT (V),0.0,0.0
+C_CoV CHT 4 (deg C),0.0,0.0
+C_CoV CABIN TEMPERATURE (deg C),0.0,0.0
+C_CoV ALT CONTACT (V),0.0,0.0
+C_CoV EGT 1 (deg C),0.0,0.0
+C_CoV CHT 1 (deg C),0.0,0.0
+C_CoV EGT 2 (deg C),0.0,0.0
+C_CoV CHT 2 (deg C),0.0,0.0
+C_CoV CHT 3 (deg C),0.0,0.0
+C_CoV EGT 4 (deg C),0.0,0.0
+C_MedF EGT 5 (deg C),0.0,0.0
+C_MedF EGT 4 (deg C),0.0,0.0
+D_Skewness Amps,0.0,0.0
+D_Kurtosis EGT 3 (deg C),0.0,0.0
+D_Kurtosis CHT 4 (deg C),0.0,0.0
+D_Kurtosis EGT 5 (deg C),0.0,0.0
+D_Kurtosis CHT 5 (deg C),0.0,0.0
+D_Kurtosis EGT 6 (deg C),0.0,0.0
+D_Kurtosis CHT 6 (deg C),0.0,0.0
+D_Kurtosis Volts 1,0.0,0.0
+D_Kurtosis Fuel Remaining (gal),0.0,0.0
+D_Kurtosis Fuel Level R (gal),0.0,0.0
+D_Kurtosis Fuel Level L (gal),0.0,0.0
+D_Kurtosis Fuel Pressure (PSI),0.0,0.0
+D_Kurtosis Manifold Pressure (inHg),0.0,0.0
+D_Kurtosis RPM L,0.0,0.0
+D_Kurtosis Oil Pressure (PSI),0.0,0.0
+D_Kurtosis Barometer Setting (inHg),0.0,0.0
+D_Kurtosis OAT (deg C),0.0,0.0
+D_Kurtosis Vertical Speed (ft/min),0.0,0.0
+D_Kurtosis Angle of Attack (%),0.0,0.0
+C_SF EGT Leaning State,0.0,0.0
+C_SF OIL TEMPERATURE (deg C),0.0,0.0
+D_Kurtosis EGT 4 (deg C),0.0,0.0
+D_Kurtosis CHT 2 (deg C),0.0,0.0
+C_MedF CHT 3 (deg C),0.0,0.0
+D_Kurtosis EGT 2 (deg C),0.0,0.0
+D_Skewness Volts 1,0.0,0.0
+D_Skewness Fuel Remaining (gal),0.0,0.0
+D_Skewness Fuel Level R (gal),0.0,0.0
+D_Skewness Fuel Pressure (PSI),0.0,0.0
+D_Skewness Fuel Flow 1 (gal/hr),0.0,0.0
+D_Skewness Manifold Pressure (inHg),0.0,0.0
+D_Skewness RPM L,0.0,0.0
+D_Skewness Oil Pressure (PSI),0.0,0.0
+D_Skewness Barometer Setting (inHg),0.0,0.0
+D_Skewness True Airspeed (knots),0.0,0.0
+D_Skewness OAT (deg C),0.0,0.0
+D_Skewness Vertical Speed (ft/min),0.0,0.0
+D_Skewness Angle of Attack (%),0.0,0.0
+D_Skewness Pressure Altitude (ft),0.0,0.0
+D_Kurtosis Percent Power,0.0,0.0
+D_Kurtosis CANOPY CONTACT (V),0.0,0.0
+D_Kurtosis FUEL CONTACT (V),0.0,0.0
+D_Kurtosis CABIN TEMPERATURE (deg C),0.0,0.0
+D_Kurtosis ALT CONTACT (V),0.0,0.0
+C_SF CANOPY CONTACT (V),0.0,0.0
+C_SF FUEL CONTACT (V),0.0,0.0
+C_SF CABIN TEMPERATURE (deg C),0.0,0.0
+C_SF ALT CONTACT (V),0.0,0.0
+C_SF Barometer Setting (inHg),0.0,0.0
+C_SF True Airspeed (knots),0.0,0.0
+C_SF OAT (deg C),0.0,0.0
+C_SF Vertical Speed (ft/min),0.0,0.0
+C_SF Angle of Attack (%),0.0,0.0
+C_SF Pressure Altitude (ft),0.0,0.0
+C_SF Pitch (deg),0.0,0.0
+C_MedF EGT Leaning State,0.0,0.0
+C_MedF Percent Power,0.0,0.0
+C_MedF OIL TEMPERATURE (deg C),0.0,0.0
+C_MedF CANOPY CONTACT (V),0.0,0.0
+C_MedF FUEL CONTACT (V),0.0,0.0
+C_MedF CABIN TEMPERATURE (deg C),0.0,0.0
+C_MedF ALT CONTACT (V),0.0,0.0
+C_MedF EGT 1 (deg C),0.0,0.0
+C_MedF CHT 1 (deg C),0.0,0.0
+C_MedF EGT 2 (deg C),0.0,0.0
+C_MedF CHT 2 (deg C),0.0,0.0
+C_MedF EGT 3 (deg C),0.0,0.0
+C_SF Oil Pressure (PSI),0.0,0.0
+C_SF RPM L,0.0,0.0
+C_SF Manifold Pressure (inHg),0.0,0.0
+C_SF EGT 5 (deg C),0.0,0.0
+C_SF EGT 1 (deg C),0.0,0.0
+C_SF CHT 1 (deg C),0.0,0.0
+C_SF EGT 2 (deg C),0.0,0.0
+C_SF CHT 2 (deg C),0.0,0.0
+C_SF EGT 3 (deg C),0.0,0.0
+C_SF CHT 3 (deg C),0.0,0.0
+C_SF EGT 4 (deg C),0.0,0.0
+C_SF CHT 4 (deg C),0.0,0.0
+C_SF CHT 5 (deg C),0.0,0.0
+C_SF Fuel Flow 1 (gal/hr),0.0,0.0
+C_SF EGT 6 (deg C),0.0,0.0
+C_SF CHT 6 (deg C),0.0,0.0
+C_SF Amps,0.0,0.0
+C_SF Volts 1,0.0,0.0
+C_SF Fuel Remaining (gal),0.0,0.0
+C_SF Fuel Level R (gal),0.0,0.0
+C_SF Fuel Level L (gal),0.0,0.0
+C_SF Fuel Pressure (PSI),0.0,0.0
+L_c EGT Leaning State,0.0,0.0

@@ -1,0 +1,2 @@
+Case,Model,FS_Type,AUC_ROC,Class
+1,lgbm,lgbm_fi_casc,0.806,0 and 2
