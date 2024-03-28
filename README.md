@@ -1,4 +1,4 @@
-# Fault Prediction for Operational Aero-Engines: A Case Study with a Data-driven Approach
+# Fault Prediction for Operational Aero-Engines: A Case Study with a Data-Driven Approach
 
 ## Description
 
