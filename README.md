@@ -2,10 +2,7 @@
 
 ## Description
 
-This program performs the full model building procedure for Problem FPs with LightGBM using the features computed in the case study. 
-The program has the option of building the model using the true labels, thus recovering the cross-validation performance shown in Table 4. 
-The program also has the option of building the model from one instance of shuffled labels, thus producing a random cross-validation performance
-in line with the histogram of Figure 6.
+This program performs the full model building procedure for Problem FPs with LightGBM using the features computed in the case study. The program has the option of building the model using the true labels, thus recovering the cross-validation performance shown in Table 4. The program also has the option of building the model from instances of shuffled labels, thus producing random cross-validation performances in line with the histogram of Figure 7.
 
 ## Table of Contents
 
@@ -41,7 +38,7 @@ Line 1, Set
 ```bash
 permute = True
 ```
-to build the model from one instance of shuffled labels.
+to build the model of shuffled labels.
 
 
 ## Libraries
