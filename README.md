@@ -66,6 +66,5 @@ This project supports the research paper titled "Fault Prediction for Operationa
 
 - Amadi Gabriel Udu
   - School of Engineering, University of Leicester, University Road, Leicester LE1 7RH, UK
-  - Air Force Institute of Technology, PMB 2014, Kaduna, Nigeria
 - Andrea Lecchini-Visintini
   - School of Electronics and Computer Science, University of Southampton, University Road, Southampton SO17 1BJ, UK
